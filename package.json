@@ -1,0 +1,16 @@
+{
+  "name": "creative-stack-agency-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix \"backend\" install && npm --prefix \"frontend\" install --include=dev && concurrently \"node \\\"backend/src/server.js\\\"\" \"vite \\\"frontend\\\" --port 3000 --host 0.0.0.0\"",
+    "build": "cd \"frontend\" && npm install --include=dev && npm run build && mkdir -p ../../dist && cp -r dist/* ../../dist/",
+    "lint": "cd \"frontend\" && npm run lint"
+  },
+  "dependencies": {
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}

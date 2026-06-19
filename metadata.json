@@ -1,0 +1,6 @@
+{
+  "name": "Apex Team Showcase",
+  "description": "High-performance full-stack team showcase and interactive project gallery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
