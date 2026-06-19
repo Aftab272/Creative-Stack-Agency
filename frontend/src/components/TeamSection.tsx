@@ -2,37 +2,12 @@ import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Sparkles, Linkedin, Github, Twitter, Instagram, Facebook, Music, Award, HeartHandshake, CheckCircle, GraduationCap, Phone, Mail, X, MapPin } from "lucide-react";
 import { TEAM_DATA } from "../data";
-import { TeamMember } from "../types";
-import { getFromBackend } from "../lib/api";
 
 export default function TeamSection() {
   const [selectedMember, setSelectedMember] = React.useState<any>(null);
-  const [teamMembers, setTeamMembers] = React.useState<TeamMember[]>(TEAM_DATA);
-
-  React.useEffect(() => {
-    let active = true;
-    const loadTeam = async () => {
-      const res = await getFromBackend<TeamMember[]>("/api/team");
-      if (res && res.ok && res.data && res.data.length > 0 && active) {
-        const mappedData = res.data.map(dbMember => {
-          const staticMember = TEAM_DATA.find(m => m.id === dbMember.id);
-          return {
-            ...dbMember,
-            avatarUrl: staticMember ? staticMember.avatarUrl : dbMember.avatarUrl
-          } as TeamMember;
-        });
-        setTeamMembers(mappedData);
-      }
-    };
-    loadTeam();
-    return () => {
-      active = false;
-    };
-  }, []);
-
-  const founder = teamMembers.find(member => member.id === "akram-founder");
-  const cofounder = teamMembers.find(member => member.id === "maryam-nawaz");
-  const experts = teamMembers.filter(member => member.id !== "akram-founder" && member.id !== "maryam-nawaz");
+  const founder = TEAM_DATA.find(member => member.id === "akram-founder");
+  const cofounder = TEAM_DATA.find(member => member.id === "maryam-nawaz");
+  const experts = TEAM_DATA.filter(member => member.id !== "akram-founder" && member.id !== "maryam-nawaz");
 
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
@@ -392,7 +367,7 @@ export default function TeamSection() {
                 variants={cardVariants}
                 whileHover={{ y: -5, borderColor: "rgba(59,130,246,0.5)", boxShadow: "0 20px 40px -10px rgba(0,0,0,0.5)" }}
                 key={member.id}
-                className="group relative rounded-2xl bg-[#0a0a0ade] border border-white/5 hover:border-blue-500/20 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center shrink-0"
+                className="group relative rounded-2xl bg-[#0a0a0ade] border border-white/5 hover:border-blue-500/20 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
               >
                 {/* Visual Glass highlights */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />

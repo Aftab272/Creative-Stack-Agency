@@ -24,7 +24,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
   return (
     <motion.div
       initial={{ opacity: 1 }}
-      exit={{ opacity: 0, y: -20, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } }}
+      exit={{ opacity: 0, y: -20, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
       className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#0a0a0a]"
     >
       <div className="relative flex flex-col items-center w-full max-w-sm px-6">

@@ -23,55 +23,30 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
   ];
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMenuOpen]);
-
-  useEffect(() => {
-    let activeSectionLocal = "home";
-    let isScrolledLocal = false;
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const sy = window.scrollY;
-          const scrollScrolled = sy > 20;
-          if (scrollScrolled !== isScrolledLocal) {
-            isScrolledLocal = scrollScrolled;
-            setIsScrolled(scrollScrolled);
-          }
+      // Blur on scroll background check
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
 
-          // Check current section for active tab highlighting
-          const scrollPosition = sy + 120;
-          let currentSection = "home";
-          for (const item of navItems) {
-            const element = document.getElementById(item.id);
-            if (element) {
-              const top = element.offsetTop;
-              const height = element.offsetHeight;
-              if (scrollPosition >= top && scrollPosition < top + height) {
-                currentSection = item.id;
-              }
-            }
+      // Check current section for active tab highlighting
+      const scrollPosition = window.scrollY + 120;
+      
+      for (const item of navItems) {
+        const element = document.getElementById(item.id);
+        if (element) {
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(item.id);
           }
-          if (currentSection !== activeSectionLocal) {
-            activeSectionLocal = currentSection;
-            setActiveSection(currentSection);
-          }
-          ticking = false;
-        });
-        ticking = true;
+        }
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -94,8 +69,8 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-black lg:bg-agency-bg/80 lg:backdrop-blur-md border-b border-white/5 shadow-xl"
-          : "py-4 bg-black border-b border-white/5 lg:py-6 lg:bg-transparent lg:border-none lg:bg-transparent"
+          ? "py-3 bg-agency-bg/80 backdrop-blur-md border-b border-white/5 shadow-xl"
+          : "py-6 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -179,30 +154,12 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
         </button>
       </div>
 
-      {/* Mobile Menu Backdrop/Overlay */}
-      {isMenuOpen && (
-        <div 
-          onClick={() => setIsMenuOpen(false)}
-          className="fixed inset-0 bg-[#000000] z-40 lg:hidden transition-opacity duration-300 pointer-events-auto opacity-100"
-          aria-hidden="true"
-        />
-      )}
-
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed inset-y-0 right-0 w-full max-w-xs z-50 bg-[#000000] border-l border-white/10 p-8 pt-24 shadow-2xl transition-transform duration-500 ease-in-out lg:hidden ${
+        className={`fixed inset-y-0 right-0 w-full max-w-xs z-40 bg-[#0a0a0ae6] backdrop-blur-2xl border-l border-white/10 p-8 pt-24 shadow-2xl transition-transform duration-500 ease-in-out lg:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Inside-menu close button (highly visible and functional) */}
-        <button
-          onClick={() => setIsMenuOpen(false)}
-          className="absolute top-6 right-6 p-2 rounded-lg border border-white/20 bg-white/10 hover:bg-white/20 text-white hover:text-blue-400 transition-colors duration-200 cursor-pointer"
-          aria-label="Close menu"
-        >
-          <X className="w-5.5 h-5.5" />
-        </button>
-
         <ul className="flex flex-col gap-6 mb-8">
           {navItems.map((item) => (
             <li key={item.id}>
@@ -223,7 +180,7 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
             setIsMenuOpen(false);
             onStartProjectClick();
           }}
-          className="w-full py-3.5 text-center rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-display font-semibold hover:opacity-95 transition-opacity shadow-lg cursor-pointer"
+          className="w-full py-3.5 text-center rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-display font-semibold hover:opacity-95 transition-opacity shadow-lg"
         >
           Start Your Project
         </button>

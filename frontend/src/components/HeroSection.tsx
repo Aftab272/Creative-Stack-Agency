@@ -20,71 +20,53 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
-const MicroActiveUsers = () => {
-  const [activeUsers, setActiveUsers] = useState(1342);
-  useEffect(() => {
-    const userInterval = setInterval(() => {
-      setActiveUsers(prev => prev + Math.floor(Math.random() * 7) - 3);
-    }, 4000);
-    return () => clearInterval(userInterval);
-  }, []);
-  return <span className="block font-display font-bold text-md text-white mt-0.5">{activeUsers}</span>;
-};
-
-const MicroLatency = () => {
+export default function HeroSection({ onStartProjectClick, onViewPortfolioClick }: HeroSectionProps) {
+  // Live Dashboard State
+  const [activeTab, setActiveTab] = useState<"traffic" | "conversion" | "speed">("traffic");
   const [latency, setLatency] = useState(24);
-  useEffect(() => {
-    const latencyInterval = setInterval(() => {
-      setLatency(prev => {
-        const next = prev + Math.floor(Math.random() * 3) - 1;
-        return next < 15 ? 15 : next > 32 ? 32 : next;
-      });
-    }, 3000);
-    return () => clearInterval(latencyInterval);
-  }, []);
-  return <span className="block font-display font-bold text-md text-white mt-0.5">{latency}ms</span>;
-};
+  const [activeUsers, setActiveUsers] = useState(1342);
+  const [speedLoading, setSpeedLoading] = useState(false);
+  const [speedScore, setSpeedScore] = useState<number | null>(null);
 
-const MicroBookingTicker = () => {
+  // Live sales stream
+  const [latestBooking, setLatestBooking] = useState("David Sterling (Aether) initiated project");
   const bookings = [
     "David Sterling (Aether) initiated project",
     "Elena Rostova (Vanguard) verified payment",
     "Jonathan Cole (Chronos AI) locked strategy",
     "Marcus Drake boosted ad pipeline"
   ];
-  const [latestBooking, setLatestBooking] = useState(bookings[0]);
+
   useEffect(() => {
+    // Tick active users up/down for visual live state
+    const userInterval = setInterval(() => {
+      setActiveUsers(prev => prev + Math.floor(Math.random() * 7) - 3);
+    }, 4000);
+
+    // Rotate bookings ticker to present active workflows
     let bookingIndex = 0;
     const bookingInterval = setInterval(() => {
       bookingIndex = (bookingIndex + 1) % bookings.length;
       setLatestBooking(bookings[bookingIndex]);
     }, 6000);
-    return () => clearInterval(bookingInterval);
+
+    // Dynamic latency fluctuates
+    const latencyInterval = setInterval(() => {
+      setLatency(prev => {
+        const next = prev + Math.floor(Math.random() * 3) - 1;
+        return next < 15 ? 15 : next > 32 ? 32 : next;
+      });
+    }, 3000);
+
+    return () => {
+      clearInterval(userInterval);
+      clearInterval(bookingInterval);
+      clearInterval(latencyInterval);
+    };
   }, []);
-
-  return (
-    <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
-      <div className="flex items-center gap-2.5 overflow-hidden">
-        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
-        <span className="font-mono text-[10px] text-gray-400 whitespace-nowrap animate-pulse">
-          {latestBooking}
-        </span>
-      </div>
-      <span className="font-mono text-[9px] text-blue-400 flex-shrink-0 bg-blue-500/10 px-1.5 py-0.5 rounded ml-2">
-        JUST NOW
-      </span>
-    </div>
-  );
-};
-
-export default function HeroSection({ onStartProjectClick, onViewPortfolioClick }: HeroSectionProps) {
-  // Live Dashboard State
-  const [activeTab, setActiveTab] = useState<"traffic" | "conversion" | "speed">("traffic");
-  const [speedLoading, setSpeedLoading] = useState(false);
-  const [speedScore, setSpeedScore] = useState<number | null>(null);
 
   const handleRunSpeedTest = () => {
     if (speedLoading) return;
@@ -106,7 +88,7 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-32 pb-24 overflow-hidden bg-transparent flex flex-col justify-center"
+      className="relative min-h-screen pt-32 pb-24 overflow-hidden bg-agency-bg flex flex-col justify-center"
     >
       {/* Background Animated Gradients / Spotlights */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-blue-600/10 blur-[140px] pointer-events-none animate-pulse-slow" />
@@ -182,7 +164,7 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
         <motion.div 
           initial={{ opacity: 0, x: 40, rotateY: -15, rotateX: 15 }}
           animate={{ opacity: 1, x: 0, rotateY: -5, rotateX: 5 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const, delay: 0.6 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
           className="lg:col-span-5 relative w-full flex justify-center perspective-grid group"
         >
           
@@ -215,13 +197,13 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
               
               <div className="p-3 rounded-xl bg-white/5 border border-white/5">
                 <span className="block text-[9px] uppercase font-mono text-gray-500 tracking-wider">VIRTUAL SEED</span>
-                <MicroActiveUsers />
+                <span className="block font-display font-bold text-md text-white mt-0.5">{activeUsers}</span>
                 <span className="block text-[8px] text-blue-400 mt-1 font-mono">Live Session Influx</span>
               </div>
 
               <div className="p-3 rounded-xl bg-white/5 border border-white/5">
                 <span className="block text-[9px] uppercase font-mono text-gray-500 tracking-wider">EDGE LATENCY</span>
-                <MicroLatency />
+                <span className="block font-display font-bold text-md text-white mt-0.5">{latency}ms</span>
                 <span className="block text-[8px] text-emerald-400 mt-1 font-mono">Optimize Server</span>
               </div>
 
@@ -338,7 +320,17 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
             </div>
 
             {/* Live Streaming Booking ticker */}
-            <MicroBookingTicker />
+            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
+              <div className="flex items-center gap-2.5 overflow-hidden">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+                <span className="font-mono text-[10px] text-gray-400 whitespace-nowrap animate-pulse">
+                  {latestBooking}
+                </span>
+              </div>
+              <span className="font-mono text-[9px] text-blue-400 flex-shrink-0 bg-blue-500/10 px-1.5 py-0.5 rounded ml-2">
+                JUST NOW
+              </span>
+            </div>
 
           </motion.div>
 

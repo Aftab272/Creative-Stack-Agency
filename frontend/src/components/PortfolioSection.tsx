@@ -26,7 +26,7 @@ export default function PortfolioSection() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
     exit: { opacity: 0, scale: 0.95, transition: { duration: 0.3 } }
   };
 
@@ -90,7 +90,7 @@ export default function PortfolioSection() {
                 layout
                 whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59,130,246,0.15)" }}
                 key={project.id}
-                className="group interactive-hover relative rounded-2xl bg-agency-card border border-white/5 hover:border-blue-400/20 overflow-hidden shadow-2xl transition-colors duration-500 flex flex-col justify-between min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center shrink-0"
+                className="group interactive-hover relative rounded-2xl bg-agency-card border border-white/5 hover:border-blue-400/20 overflow-hidden shadow-2xl transition-colors duration-500 flex flex-col justify-between min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
               >
               {/* Image Preview Container */}
               <div className="relative h-56 w-full overflow-hidden bg-[#111]">

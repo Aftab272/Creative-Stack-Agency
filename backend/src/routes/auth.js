@@ -1,16 +1,12 @@
 import express from "express";
-import mongoose from "mongoose";
 import StudentAccount from "../models/StudentAccount.js";
 import { hashPassword, verifyPassword } from "../utils/password.js";
 
 const router = express.Router();
 
-// In-memory fallback database
-const mockStudents = [];
-
 function publicStudent(student) {
   return {
-    id: student._id || student.id,
+    id: student._id,
     name: student.name,
     email: student.email
   };
@@ -27,30 +23,6 @@ router.post("/signup", async (req, res, next) => {
         ok: false,
         message: "Name, valid email, and 6+ character password are required"
       });
-    }
-
-    // Checking if database is connected
-    const isDbConnected = mongoose.connection.readyState === 1;
-
-    if (!isDbConnected) {
-      const existingMock = mockStudents.find((s) => s.email === email);
-      if (existingMock) {
-        return res.status(409).json({
-          ok: false,
-          message: "Student account already exists (Mock active). Please login."
-        });
-      }
-
-      const { salt, hash } = hashPassword(password);
-      const student = {
-        id: "mock_" + Date.now(),
-        name,
-        email,
-        passwordSalt: salt,
-        passwordHash: hash
-      };
-      mockStudents.push(student);
-      return res.status(201).json({ ok: true, data: publicStudent(student) });
     }
 
     const existingStudent = await StudentAccount.findOne({ email });
@@ -86,20 +58,6 @@ router.post("/login", async (req, res, next) => {
         ok: false,
         message: "Email and password are required"
       });
-    }
-
-    // Checking if database is connected
-    const isDbConnected = mongoose.connection.readyState === 1;
-
-    if (!isDbConnected) {
-      const student = mockStudents.find((s) => s.email === email);
-      if (!student || !verifyPassword(password, student.passwordSalt, student.passwordHash)) {
-        return res.status(401).json({
-          ok: false,
-          message: "Invalid email or password (Mock active)"
-        });
-      }
-      return res.json({ ok: true, data: publicStudent(student) });
     }
 
     const student = await StudentAccount.findOne({ email });

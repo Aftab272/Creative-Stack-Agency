@@ -79,21 +79,6 @@ export default function LeftFloatingContact() {
         </svg>
       ),
     },
-    {
-      id: "fiverr",
-      name: "Fiverr",
-      tooltip: "Hire on Fiverr",
-      url: "https://www.fiverr.com/",
-      // Fiverr Signature Green
-      color: "#1DBF73",
-      shadow: "shadow-[0_0_20px_rgba(29,191,115,0.6)]",
-      bgColor: "bg-[#1DBF73]",
-      svg: (
-        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M17.8 7.2h-2.5V5.5c0-.6.4-1 .9-1H18V1.5h-3.1c-2.3 0-3.9 1.5-3.9 4v1.7H8.3v2.8h1.8v7.5H14v-7.5h3.1l.7-2.8z M8.3 4h1.8V1.5H8.3V4z" />
-        </svg>
-      ),
-    },
   ];
 
   return (

@@ -191,11 +191,6 @@ export default function Footer() {
             <a href="https://github.com/creativestackagency" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 border border-white/5 hover:border-white hover:text-white text-gray-500 transition-colors" aria-label="GitHub">
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://www.fiverr.com/" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 border border-white/5 hover:border-[#1DBF73] hover:text-[#1DBF73] text-gray-500 transition-colors flex items-center justify-center" aria-label="Fiverr">
-              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-                <path d="M17.8 7.2h-2.5V5.5c0-.6.4-1 .9-1H18V1.5h-3.1c-2.3 0-3.9 1.5-3.9 4v1.7H8.3v2.8h1.8v7.5H14v-7.5h3.1l.7-2.8z M8.3 4h1.8V1.5H8.3V4z" />
-              </svg>
-            </a>
             <a href="https://www.youtube.com/channel/UCjXYUc0PR0s-kIZKFR1MFiw" target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 border border-white/5 hover:border-[#FF0000] hover:text-[#FF0000] text-gray-500 transition-colors" aria-label="YouTube">
               <Youtube className="w-4 h-4" />
             </a>

@@ -14,8 +14,7 @@ export default function AnimatedBackground() {
           rotate: [0, 90, 0]
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        style={{ willChange: "transform, opacity" }}
-        className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-600/30 blur-[120px] transform-gpu"
+        className="absolute -top-[20%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-600/30 blur-[120px]"
       />
       <motion.div
         animate={{
@@ -25,8 +24,7 @@ export default function AnimatedBackground() {
           y: [0, -50, 0]
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        style={{ willChange: "transform, opacity" }}
-        className="absolute top-[20%] -right-[10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/20 blur-[100px] transform-gpu"
+        className="absolute top-[20%] -right-[10%] w-[40vw] h-[40vw] rounded-full bg-purple-600/20 blur-[100px]"
       />
       
       {/* Noise Texture */}

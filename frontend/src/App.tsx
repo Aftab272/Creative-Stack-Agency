@@ -28,7 +28,7 @@ export default function App() {
   const [selectedPlanId, setSelectedPlanId] = useState<string>("");
   const [selectedBudgetTag, setSelectedBudgetTag] = useState<string>("");
 
-  const handlePlanSelectionSync = React.useCallback((planId: string, budgetTag: string) => {
+  const handlePlanSelectionSync = (planId: string, budgetTag: string) => {
     setSelectedPlanId(planId);
     setSelectedBudgetTag(budgetTag);
 
@@ -41,14 +41,14 @@ export default function App() {
         behavior: "smooth"
       });
     }
-  }, []);
+  };
 
-  const handleClearPlanSelect = React.useCallback(() => {
+  const handleClearPlanSelect = () => {
     setSelectedPlanId("");
     setSelectedBudgetTag("");
-  }, []);
+  };
 
-  const handleJumpToContactDirectly = React.useCallback(() => {
+  const handleJumpToContactDirectly = () => {
     const contactSec = document.getElementById("contact");
     if (contactSec) {
       const topOffset = contactSec.offsetTop - 80;
@@ -57,9 +57,9 @@ export default function App() {
         behavior: "smooth"
       });
     }
-  }, []);
+  };
 
-  const handleJumpToPortfolioDirectly = React.useCallback(() => {
+  const handleJumpToPortfolioDirectly = () => {
     const portfolioSec = document.getElementById("portfolio");
     if (portfolioSec) {
       const topOffset = portfolioSec.offsetTop - 80;
@@ -68,7 +68,7 @@ export default function App() {
         behavior: "smooth"
       });
     }
-  }, []);
+  };
 
   return (
     <div className="relative min-h-screen bg-transparent text-gray-100 overflow-x-hidden selection:bg-blue-600 selection:text-white">

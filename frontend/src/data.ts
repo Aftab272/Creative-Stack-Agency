@@ -947,16 +947,6 @@ export const SOCIAL_PLATFORMS: SocialPlatform[] = [
     buttonLabel: "Chat on Botim",
     statsText: "03027434569",
     accentGradient: "from-[#00CC66]/20 to-[#00994C]/20 hover:border-[#00CC66]/40"
-  },
-  {
-    id: "fiverr",
-    platformName: "Fiverr Workspace",
-    iconName: "Fiverr",
-    description: "Connect with us on Fiverr for secure project contract escrow, structured design milestone delivery, and fully certified custom development gigs.",
-    visitUrl: "https://www.fiverr.com/",
-    buttonLabel: "Hire on Fiverr",
-    statsText: "SLA Certified Gigs",
-    accentGradient: "from-[#1DBF73]/20 to-[#109655]/20 hover:border-[#1DBF73]/40"
   }
 ];
 
