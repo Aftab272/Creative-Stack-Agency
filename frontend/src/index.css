@@ -8,8 +8,8 @@
 
   --color-agency-bg: #0A0A0A;
   --color-agency-primary: #0A0A0A;
-  --color-agency-accent: #3b82f6;
-  --color-agency-accent-purple: #8b5cf6;
+  --color-agency-accent: #eab308;
+  --color-agency-accent-purple: #ca8a04;
   --color-agency-card: rgba(255, 255, 255, 0.03);
   --color-agency-border: rgba(255, 255, 255, 0.08);
   --color-agency-border-hover: rgba(255, 255, 255, 0.16);
@@ -71,9 +71,9 @@ body {
   overflow-x: hidden;
   font-family: var(--font-sans);
   background-color: #0A0A0A;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 40%);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(234, 179, 8, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(202, 138, 4, 0.1) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -98,18 +98,18 @@ body {
 }
 .glass-card-hover:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: rgba(234, 179, 8, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.15);
 }
 
 /* Accent Glow and Shadow classes */
 .accent-glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
 }
 
 .accent-glow-purple {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px rgba(202, 138, 4, 0.3);
 }
 
 /* Accent gradient border on hover */
@@ -122,7 +122,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  background: linear-gradient(to right, #eab308, #ca8a04);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -137,7 +137,7 @@ body {
 .custom-cursor {
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(59, 130, 246, 0.5);
+  border: 2px solid rgba(234, 179, 8, 0.5);
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -149,7 +149,7 @@ body {
 .custom-cursor-dot {
   width: 4px;
   height: 4px;
-  background-color: #3b82f6;
+  background-color: #eab308;
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -172,7 +172,7 @@ body {
 }
 
 .grid-rows-custom {
-  background-image: linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(to bottom, rgba(234, 179, 8, 0.05) 1px, transparent 1px);
   background-size: 100% 24px;
 }
 
@@ -213,12 +213,12 @@ body {
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
-    border-color: rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 15px rgba(234, 179, 8, 0.15);
+    border-color: rgba(234, 179, 8, 0.2);
   }
   50% {
-    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
-    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 25px rgba(234, 179, 8, 0.35);
+    border-color: rgba(234, 179, 8, 0.5);
   }
 }
 

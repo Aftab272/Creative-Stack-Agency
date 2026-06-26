@@ -41,12 +41,12 @@ export default function PortfolioSection() {
         {/* Section Header */}
         <div className="flex flex-col xl:flex-row xl:items-end justify-between mb-12 gap-6">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4 font-mono text-[10px] uppercase text-blue-300 font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-4 font-mono text-[10px] uppercase text-yellow-300 font-semibold">
+              <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
               CASE STUDIES
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
-              Crafted Interfaces. Massive Scale<span className="text-blue-500">.</span>
+              Crafted Interfaces. Massive Scale<span className="text-yellow-500">.</span>
             </h2>
             <p className="text-gray-400 text-sm mt-3 font-light leading-relaxed">
               Explore our record of high-performance technical engineering, luxury visual branding, headless commerce systems, and search-dominant SEO acquisitions.
@@ -61,7 +61,7 @@ export default function PortfolioSection() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-lg text-xs font-medium tracking-wider transition-all duration-350 cursor-pointer flex-shrink-0 ${
                   selectedCategory === cat
-                    ? "bg-blue-600 text-white shadow-md font-semibold"
+                    ? "bg-yellow-500 text-black shadow-md font-semibold"
                     : "text-gray-400 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -88,9 +88,9 @@ export default function PortfolioSection() {
                 animate="show"
                 exit="exit"
                 layout
-                whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59,130,246,0.15)" }}
+                whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(234,179,8,0.15)" }}
                 key={project.id}
-                className="group interactive-hover relative rounded-2xl bg-agency-card border border-white/5 hover:border-blue-400/20 overflow-hidden shadow-2xl transition-colors duration-500 flex flex-col justify-between min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
+                className="group interactive-hover relative rounded-2xl bg-agency-card border border-white/5 hover:border-yellow-400/20 overflow-hidden shadow-2xl transition-colors duration-500 flex flex-col justify-between min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
               >
               {/* Image Preview Container */}
               <div className="relative h-56 w-full overflow-hidden bg-[#111]">
@@ -100,16 +100,15 @@ export default function PortfolioSection() {
                   alt={project.title}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100"
-                  loading="lazy"
                 />
                 
                 {/* Float Category Overlay tag */}
                 <div className="absolute top-4 left-4 z-20 flex gap-2">
-                  <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-blue-400 uppercase font-semibold">
+                  <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-yellow-400 uppercase font-semibold">
                     {project.category}
                   </span>
                   {project.projectType && (
-                     <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-purple-400 uppercase font-semibold hide-on-mobile">
+                     <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-yellow-300 uppercase font-semibold hide-on-mobile">
                        {project.projectType}
                      </span>
                   )}
@@ -139,7 +138,7 @@ export default function PortfolioSection() {
 
                 {/* Quantifiable Results Panel */}
                 <div className="mt-6 pt-4 border-t border-white/5 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                  <span className="font-mono text-[8px] text-blue-400 tracking-wider block mb-1.5 uppercase font-bold">CORE CAMPAIGN IMPACT:</span>
+                  <span className="font-mono text-[8px] text-yellow-400 tracking-wider block mb-1.5 uppercase font-bold">CORE CAMPAIGN IMPACT:</span>
                   <ul className="space-y-1">
                     {project.results.slice(0, 2).map((res, index) => (
                       <li key={index} className="text-[10px] text-gray-300 font-medium flex items-center gap-1.5 font-sans">
@@ -154,7 +153,7 @@ export default function PortfolioSection() {
                 <div className="flex flex-wrap items-center justify-between gap-3 mt-6">
                   <button
                     onClick={() => setActiveCaseStudyProject(project)}
-                    className="inline-flex items-center gap-2 text-xs text-blue-400 hover:text-white font-display font-semibold transition-colors cursor-pointer group/btn flex-1"
+                    className="inline-flex items-center gap-2 text-xs text-yellow-400 hover:text-white font-display font-semibold transition-colors cursor-pointer group/btn flex-1"
                   >
                     View Case Study
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -186,15 +185,15 @@ export default function PortfolioSection() {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center py-24 px-6 border border-white/5 rounded-3xl bg-agency-card mt-8 flex flex-col items-center justify-center shadow-2xl relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-900/10 via-transparent to-transparent opacity-50" />
             <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 relative z-10">
-              <Sparkles className="w-6 h-6 text-blue-400 opacity-50" />
+              <Sparkles className="w-6 h-6 text-yellow-400 opacity-50" />
             </div>
             <h3 className="text-xl font-display font-bold text-white mb-2 relative z-10">No projects found</h3>
             <p className="text-gray-400 font-light text-sm max-w-sm mb-6 relative z-10">We couldn't find any case studies matching the "{selectedCategory}" category right now.</p>
-            <button 
+            <button
               onClick={() => setSelectedCategory("All")}
-              className="px-6 py-2.5 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 text-xs font-mono font-medium hover:bg-blue-500/20 hover:text-blue-300 transition-colors relative z-10"
+              className="px-6 py-2.5 rounded-full border border-yellow-500/20 bg-yellow-500/10 text-yellow-400 text-xs font-mono font-medium hover:bg-yellow-500/20 hover:text-yellow-300 transition-colors relative z-10"
             >
               Clear Filters
             </button>
@@ -227,11 +226,11 @@ export default function PortfolioSection() {
               />
               <div className="absolute bottom-6 left-6 right-6 z-20">
                 <div className="flex gap-2 mb-2">
-                  <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-blue-400 uppercase font-semibold backdrop-blur-sm">
+                  <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-yellow-400 uppercase font-semibold backdrop-blur-sm">
                     {activeCaseStudyProject.category}
                   </span>
                   {activeCaseStudyProject.projectType && (
-                     <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-purple-400 uppercase font-semibold backdrop-blur-sm">
+                     <span className="px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-yellow-300 uppercase font-semibold backdrop-blur-sm">
                        {activeCaseStudyProject.projectType}
                      </span>
                   )}
@@ -252,7 +251,7 @@ export default function PortfolioSection() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 {activeCaseStudyProject.results.map((res, index) => (
                   <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/5 text-center flex flex-col justify-center">
-                    <span className="text-xl sm:text-2xl font-display font-black text-emerald-400 tracking-tight block">
+                    <span className="text-xl sm:text-2xl font-display font-black text-yellow-400 tracking-tight block">
                       {res.split(" ")[0]}
                     </span>
                     <span className="text-xs text-gray-400 font-light mt-1.5 font-mono leading-tight px-2">
@@ -264,9 +263,9 @@ export default function PortfolioSection() {
 
               {/* Challenge vs Solution layout */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 border-b border-white/5 pb-10">
-                
+
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-red-400">
+                  <div className="flex items-center gap-2 text-yellow-400">
                     <Target className="w-5 h-5" />
                     <h4 className="font-display font-semibold text-xs uppercase tracking-wider">THE CORE CHALLENGE:</h4>
                   </div>
@@ -276,7 +275,7 @@ export default function PortfolioSection() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-emerald-400">
+                  <div className="flex items-center gap-2 text-yellow-300">
                     <CheckSquare className="w-5 h-5" />
                     <h4 className="font-display font-semibold text-xs uppercase tracking-wider">ENGINEERED SOLUTION:</h4>
                   </div>
@@ -329,7 +328,7 @@ export default function PortfolioSection() {
                     href={activeCaseStudyProject.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-4 text-center rounded-xl bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20 text-white font-display font-semibold text-sm transition-all cursor-pointer inline-flex items-center justify-center gap-2"
+                    className="flex-1 py-4 text-center rounded-xl bg-yellow-500 hover:bg-yellow-400 shadow-lg shadow-yellow-500/20 text-black font-display font-semibold text-sm transition-all cursor-pointer inline-flex items-center justify-center gap-2"
                   >
                     Visit Live Environment
                     <ExternalLink className="w-4 h-4" />
