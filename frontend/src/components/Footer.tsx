@@ -28,7 +28,6 @@ export default function Footer() {
     <footer className="relative bg-[#0A0A0A]/40 border-t border-white/5 pt-20 pb-10 overflow-hidden">
       
       {/* Background soft color spotlight */}
-      <div className="absolute bottom-0 right-[20%] w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-[20%] w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
