@@ -29,6 +29,7 @@ export default function Footer() {
       
       {/* Background soft color spotlight */}
       <div className="absolute bottom-0 right-[20%] w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-[20%] w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -38,9 +39,9 @@ export default function Footer() {
           {/* Column 1: Core profile */}
           <div className="lg:col-span-4 flex flex-col items-start space-y-4">
             <a href="#home" onClick={(e) => handleQuickLaunch(e, "home")} className="flex items-center gap-3 group cursor-pointer">
-              <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900/50 border border-white/10 shadow-sm transition-all duration-300 group-hover:border-blue-500/30 group-hover:bg-slate-900/80">
+              <div className="relative flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900/50 border border-white/10 shadow-sm transition-all duration-300 group-hover:border-yellow-500/30 group-hover:bg-slate-900/80">
                 <svg 
-                  className="w-4.5 h-4.5 text-blue-500" 
+                  className="w-4.5 h-4.5 text-yellow-500" 
                   viewBox="0 0 24 24" 
                   fill="none" 
                   stroke="currentColor" 
@@ -48,13 +49,13 @@ export default function Footer() {
                   strokeLinecap="round" 
                   strokeLinejoin="round"
                 >
-                  <polygon points="12 2 2 7 12 12 22 7 12 2" className="fill-blue-500/20 stroke-blue-400" />
-                  <polyline points="2 17 12 22 22 17" className="stroke-blue-500" />
-                  <polyline points="2 12 12 17 22 12" className="stroke-blue-400" />
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" className="fill-yellow-500/20 stroke-yellow-400" />
+                  <polyline points="2 17 12 22 22 17" className="stroke-yellow-500" />
+                  <polyline points="2 12 12 17 22 12" className="stroke-yellow-400" />
                 </svg>
               </div>
-              <span className="font-display font-bold text-lg tracking-tight text-white group-hover:text-blue-400 transition-colors">
-                Creative Stack <span className="text-blue-500 font-medium">Agency</span>
+              <span className="font-display font-bold text-lg tracking-tight text-white group-hover:text-yellow-400 transition-colors">
+                Creative Stack <span className="text-yellow-500 font-medium">Agency</span>
               </span>
             </a>
             <p className="text-gray-400 text-xs font-light leading-relaxed max-w-xs pt-2">
@@ -73,7 +74,7 @@ export default function Footer() {
                   <a
                     href={`#${item.toLowerCase()}`}
                     onClick={(e) => handleQuickLaunch(e, item.toLowerCase())}
-                    className="text-gray-400 hover:text-blue-400 transition-colors text-xs font-light"
+                    className="text-gray-400 hover:text-yellow-400 transition-colors text-xs font-light"
                   >
                     {item}
                   </a>
@@ -89,22 +90,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs font-light text-gray-400">
               <li>
-                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-blue-450 transition-colors">Web Apps Development</a>
+                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-yellow-400 transition-colors">Web Apps Development</a>
               </li>
               <li>
-                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-blue-450 transition-colors">Custom iOS & Android</a>
+                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-yellow-400 transition-colors">Custom iOS & Android</a>
               </li>
               <li>
-                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-blue-450 transition-colors">Headless Shopify Plus</a>
+                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-yellow-400 transition-colors">Headless Shopify Plus</a>
               </li>
               <li>
-                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-blue-450 transition-colors">Corporate UI/UX Guideline</a>
+                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-yellow-400 transition-colors">Corporate UI/UX Guideline</a>
               </li>
               <li>
-                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-blue-450 transition-colors">Cinematic sound/video edits</a>
+                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-yellow-400 transition-colors">Cinematic sound/video edits</a>
               </li>
               <li>
-                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-blue-450 transition-colors">SEO Campaign Scaling</a>
+                <a href="#services" onClick={(e) => handleQuickLaunch(e, "services")} className="hover:text-yellow-400 transition-colors">SEO Campaign Scaling</a>
               </li>
             </ul>
           </div>
@@ -141,13 +142,13 @@ export default function Footer() {
             <ul className="space-y-3 text-xs font-light text-gray-400">
               <li className="flex flex-col">
                 <span className="text-[10px] text-gray-500 font-mono tracking-wider">ONBOARDING EMAIL DIRECT</span>
-                <a href="mailto:maryamnawazdev7780@gmail.com" className="text-white hover:text-blue-400 transition-colors mt-0.5">
+                <a href="mailto:maryamnawazdev7780@gmail.com" className="text-white hover:text-yellow-400 transition-colors mt-0.5">
                   maryamnawazdev7780@gmail.com
                 </a>
               </li>
               <li className="flex flex-col">
                 <span className="text-[10px] text-gray-500 font-mono tracking-wider">AGENCY PHONE CORE</span>
-                <a href="tel:+923027434569" className="text-white hover:text-blue-400 transition-colors mt-0.5">
+                <a href="tel:+923027434569" className="text-white hover:text-yellow-400 transition-colors mt-0.5">
                   +923027434569
                 </a>
               </li>
@@ -170,7 +171,7 @@ export default function Footer() {
             </p>
             <p className="text-gray-500 text-[10px] font-sans flex items-center justify-center md:justify-start gap-1">
               Built with creativity, technology, and absolute engineering standards
-              <Sparkles className="w-3.5 h-3.5 text-blue-500" />
+              <Sparkles className="w-3.5 h-3.5 text-yellow-500" />
             </p>
           </div>
 
@@ -202,7 +203,7 @@ export default function Footer() {
           {/* Core Scroll to top clicker */}
           <button
             onClick={handleScrollToTop}
-            className="p-3 rounded-xl bg-white/5 hover:bg-blue-600 border border-white/5 hover:border-blue-500 text-gray-400 hover:text-white transition-all transform hover:-translate-y-1 cursor-pointer absolute right-0 -top-16 md:static"
+            className="p-3 rounded-xl bg-white/5 hover:bg-yellow-500 border border-white/5 hover:border-yellow-400 text-gray-400 hover:text-black transition-all transform hover:-translate-y-1 cursor-pointer absolute right-0 -top-16 md:static"
             aria-label="Back to Top"
           >
             <ArrowUp className="w-4 h-4" />

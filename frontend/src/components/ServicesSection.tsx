@@ -56,19 +56,19 @@ export default function ServicesSection({ onStartProjectClick }: ServicesSection
   return (
     <section id="services" className="relative py-28 bg-transparent overflow-hidden border-t border-white/5">
       {/* Background gradients */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-yellow-600/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4 font-mono text-[10px] uppercase text-blue-300 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-4 font-mono text-[10px] uppercase text-yellow-300 font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
             Core Capabilities
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-4">
-            Bespoke Services. Proven Growth<span className="text-blue-500">.</span>
+            Bespoke Services. Proven Growth<span className="text-yellow-500">.</span>
           </h2>
           <p className="text-gray-400 text-md leading-relaxed font-light">
             We bypass generic templates to engineer custom-coded, search-optimized web applications, engaging video assets, and elite marketing frameworks tailored to maximize client conversions.
@@ -86,20 +86,20 @@ export default function ServicesSection({ onStartProjectClick }: ServicesSection
           {SERVICES_DATA.map((service) => (
             <motion.div
               variants={cardVariants}
-              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59,130,246,0.25)", borderColor: "rgba(59,130,246,0.3)" }}
+              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(234,179,8,0.25)", borderColor: "rgba(234,179,8,0.3)" }}
               key={service.id}
               className="group interactive-hover relative p-6 rounded-2xl bg-agency-card border border-white/5 shadow-lg transition-colors duration-500 flex flex-col justify-between"
             >
               {/* Background gradient border subtle on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 to-yellow-600/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
               
               <div>
                 {/* Custom Icon Circle */}
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 group-hover:bg-blue-600/15 group-hover:border-blue-400/20 flex items-center justify-center text-gray-400 group-hover:text-blue-400 transition-all duration-300 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 group-hover:bg-yellow-600/15 group-hover:border-yellow-400/20 flex items-center justify-center text-gray-400 group-hover:text-yellow-400 transition-all duration-300 mb-6">
                   <IconComponent name={service.iconName} className="w-6 h-6 transition-transform group-hover:scale-110" />
                 </div>
 
-                <h3 className="font-display font-semibold text-lg text-white mb-3 group-hover:text-blue-300 transition-colors">
+                <h3 className="font-display font-semibold text-lg text-white mb-3 group-hover:text-yellow-300 transition-colors">
                   {service.title}
                 </h3>
                 
@@ -111,7 +111,7 @@ export default function ServicesSection({ onStartProjectClick }: ServicesSection
                 <ul className="space-y-2 mb-6 border-t border-white/5 pt-4">
                   {service.bulletPoints.map((point, index) => (
                     <li key={index} className="flex items-center gap-2 text-[11px] text-gray-300">
-                      <div className="w-1 h-1 rounded-full bg-blue-400/80" />
+                      <div className="w-1 h-1 rounded-full bg-yellow-400/80" />
                       {point}
                     </li>
                   ))}
@@ -121,7 +121,7 @@ export default function ServicesSection({ onStartProjectClick }: ServicesSection
               {/* Action Button */}
               <button
                 onClick={() => setActiveModalService(service)}
-                className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 font-semibold group/btn cursor-pointer py-1 mt-2 tracking-wide self-start"
+                className="inline-flex items-center gap-1.5 text-xs text-yellow-400 hover:text-yellow-300 font-semibold group/btn cursor-pointer py-1 mt-2 tracking-wide self-start"
               >
                 Learn More
                 <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1.5 transition-transform" />

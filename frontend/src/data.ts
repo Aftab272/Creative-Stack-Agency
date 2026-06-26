@@ -235,6 +235,60 @@ export const PORTFOLIO_DATA: Project[] = [
     liveUrl: "https://project.lovestoblog.com/",
     challenge: "The client needed a responsive, super-fast visual platform to showcase custom design work without high developer maintenance overhead.",
     solution: "We customized an optimized WordPress lightweight child theme, configured WP Rocket caches, and established an exact visual style matches framework."
+  },
+  {
+    id: "sami-github-portfolio",
+    title: "Sami Full Stack Developer Portfolio",
+    clientName: "M Sami Ullah",
+    description: "Professional GitHub portfolio showcasing full-stack development projects, calculator applications, and technical expertise.",
+    previewImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
+    caseStudy: "Developed a comprehensive GitHub portfolio to demonstrate full-stack capabilities including React applications, calculator projects, and various development work. The portfolio highlights technical skills and project contributions.",
+    results: [
+      "Multiple Open Source Contributions",
+      "Full Stack Project Demonstrations",
+      "Active GitHub Community Presence"
+    ],
+    category: "Web",
+    tags: ["React", "Full Stack", "JavaScript", "GitHub", "Open Source"],
+    githubUrl: "https://github.com/Sami3234?tab=repositories",
+    challenge: "Needed a centralized platform to showcase diverse development projects and technical expertise to potential clients and employers.",
+    solution: "Created a well-organized GitHub portfolio with detailed project documentation, code samples, and live demonstrations of full-stack applications."
+  },
+  {
+    id: "fiaz-github-portfolio",
+    title: "Fiaz Developer Portfolio",
+    clientName: "Fiaz Ahmed",
+    description: "GitHub portfolio featuring development projects, code repositories, and technical contributions across various technologies.",
+    previewImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+    caseStudy: "Built a professional GitHub presence to showcase development work, including web applications, utilities, and collaborative projects. The portfolio demonstrates coding proficiency and project management skills.",
+    results: [
+      "Comprehensive Code Repository",
+      "Multiple Technology Stack Projects",
+      "Active Development Contributions"
+    ],
+    category: "Web",
+    tags: ["Web Development", "JavaScript", "GitHub", "Full Stack", "API Integration"],
+    githubUrl: "https://github.com/fiaz32304",
+    challenge: "Required a professional platform to display coding projects and attract collaboration opportunities within the developer community.",
+    solution: "Established a structured GitHub portfolio with organized repositories, detailed README files, and active project maintenance."
+  },
+  {
+    id: "hasnain-github-portfolio",
+    title: "Hasnain Developer Portfolio",
+    clientName: "Hasnain Ali",
+    description: "GitHub portfolio showcasing software development projects, web applications, and technical expertise in modern frameworks.",
+    previewImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80",
+    caseStudy: "Created a professional GitHub presence to demonstrate software development capabilities, including web applications, API integrations, and modern framework implementations. The portfolio serves as a testament to technical proficiency.",
+    results: [
+      "Diverse Project Portfolio",
+      "Modern Framework Expertise",
+      "Active Code Contributions"
+    ],
+    category: "Web",
+    tags: ["Software Development", "React", "Node.js", "GitHub", "Modern Frameworks"],
+    githubUrl: "https://github.com/hasnain17576",
+    challenge: "Needed a comprehensive platform to showcase software development skills and attract opportunities in the tech industry.",
+    solution: "Developed a well-structured GitHub portfolio with high-quality projects, detailed documentation, and active community engagement."
   }
 ];
 

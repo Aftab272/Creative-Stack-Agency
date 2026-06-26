@@ -107,17 +107,17 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
         >
           
           {/* Sparkle badge */}
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 animate-float">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span className="font-mono text-[10px] uppercase tracking-widest text-blue-300 font-semibold">
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-6 animate-float">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
+            <span className="font-mono text-[10px] uppercase tracking-widest text-yellow-300 font-semibold">
               The Standard of Creative Engineering
             </span>
           </motion.div>
 
           {/* Core display headline */}
           <motion.h1 variants={itemVariants} className="font-display font-bold text-5xl sm:text-6xl md:text-7xl tracking-tighter text-white leading-none mb-6">
-            Build<span className="text-blue-500">.</span> <br />
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Build<span className="text-yellow-500">.</span> <br />
+            <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent">
               Design. Scale.
             </span>
           </motion.h1>
@@ -130,7 +130,7 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-12 w-full sm:w-auto">
             <button
               onClick={onStartProjectClick}
-              className="interactive-hover group px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-display font-semibold tracking-wide hover:shadow-[0_10px_35px_-8px_rgba(59,130,246,0.6)] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
+              className="interactive-hover group px-8 py-4 rounded-xl bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-display font-semibold tracking-wide hover:shadow-[0_10px_35px_-8px_rgba(234,179,8,0.6)] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
             >
               Start Project
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -169,11 +169,11 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
         >
           
           {/* Decorative glowing gradient ring in the background of the dashboard */}
-          <div className="absolute inset-x-0 -top-10 h-64 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-[60px] rounded-full pointer-events-none" />
+          <div className="absolute inset-x-0 -top-10 h-64 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 blur-[60px] rounded-full pointer-events-none" />
 
           {/* Interactive Core Glass Panel */}
           <motion.div 
-            whileHover={{ scale: 1.02, rotateY: 0, rotateX: 0, borderColor: "rgba(59,130,246,0.5)" }}
+            whileHover={{ scale: 1.02, rotateY: 0, rotateX: 0, borderColor: "rgba(234,179,8,0.5)" }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="relative w-full max-w-[440px] rounded-2xl glass-effect p-6 shadow-3xl border border-white/10"
           >

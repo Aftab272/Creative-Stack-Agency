@@ -150,8 +150,8 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
   return (
     <section id="contact" className="relative py-28 bg-transparent overflow-hidden border-t border-white/5">
       {/* Background spotlights */}
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 right-[5%] w-80 h-80 bg-purple-600/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-yellow-600/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 right-[5%] w-80 h-80 bg-yellow-700/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
@@ -188,7 +188,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
                     placeholder="e.g. John Doe"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white focus:outline-none focus:border-blue-500 hover:border-white/15 transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white focus:outline-none focus:border-yellow-500 hover:border-white/15 transition-all"
                   />
                 </div>
                 <div className="space-y-2">
@@ -199,7 +199,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
                     placeholder="e.g. john@enterprise.org"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white focus:outline-none focus:border-blue-500 hover:border-white/15 transition-all"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white focus:outline-none focus:border-yellow-500 hover:border-white/15 transition-all"
                   />
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
                         onClick={() => handleToggleProjectType(type)}
                         className={`px-3 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer ${
                           isSelected
-                            ? "bg-blue-600/10 border-blue-500 text-blue-400 font-semibold"
+                            ? "bg-yellow-600/10 border-yellow-500 text-yellow-400 font-semibold"
                             : "bg-[#0a0a0ade] border-white/5 text-gray-400 hover:text-white"
                         }`}
                       >
@@ -244,7 +244,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
                         onClick={() => setActiveBudget(bg)}
                         className={`py-3 px-1 rounded-xl text-xs font-mono border transition-all cursor-pointer text-center ${
                           isSelected
-                            ? "bg-blue-600 text-white border-blue-500 font-semibold shadow-md"
+                            ? "bg-yellow-600 text-black border-yellow-500 font-semibold shadow-md"
                             : "bg-[#0a0a0ade] border-white/5 text-gray-500 hover:text-white"
                         }`}
                       >
@@ -273,7 +273,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
                 
                 <button
                   type="submit"
-                  className="flex-1 group py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-display font-semibold text-xs tracking-wider uppercase transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer hover:shadow-lg"
+                  className="flex-1 group py-4 rounded-xl bg-yellow-600 hover:bg-yellow-500 text-black font-display font-semibold text-xs tracking-wider uppercase transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer hover:shadow-lg"
                 >
                   <Send className="w-4 h-4" />
                   Transmit Ticket
@@ -312,8 +312,8 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
             <div className="rounded-2xl border border-white/15 bg-black p-6 shadow-xl relative overflow-hidden h-72 flex flex-col justify-between">
               
               {/* Live Status overlay */}
-              <div className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-[#3b82f6] uppercase font-bold flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping" />
+              <div className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-white/10 text-[9px] font-mono tracking-widest text-[#eab308] uppercase font-bold flex items-center gap-1.5">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-yellow-500 animate-ping" />
                 Global Server Hubs
               </div>
 
@@ -365,27 +365,27 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
             <div className="space-y-4 rounded-xl border border-white/5 bg-white/[0.01] p-6 text-xs font-mono">
               
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-blue-400" />
+                <Mail className="w-4 h-4 text-yellow-400" />
                 <div>
                   <span className="block text-[8px] text-gray-500 uppercase">DIRECT EMAIL INTAKE</span>
-                  <a href="mailto:creativestackagency513@gmail.com" className="block text-white hover:text-blue-300 font-medium font-sans">
+                  <a href="mailto:creativestackagency513@gmail.com" className="block text-white hover:text-yellow-300 font-medium font-sans">
                     creativestackagency513@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <PhoneCall className="w-4 h-4 text-blue-400" />
+                <PhoneCall className="w-4 h-4 text-yellow-400" />
                 <div>
                   <span className="block text-[8px] text-gray-500 uppercase">AGENCY PHONE CORE</span>
-                  <a href="tel:+923027434569" className="block text-white hover:text-blue-300 font-medium font-sans">
+                  <a href="tel:+923027434569" className="block text-white hover:text-yellow-300 font-medium font-sans">
                     +923027434569
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-blue-400" />
+                <Clock className="w-4 h-4 text-yellow-400" />
                 <div>
                   <span className="block text-[8px] text-gray-500 uppercase">OFFICIAL RESPONSE BOUND</span>
                   <span className="block text-emerald-400 font-bold font-sans">
@@ -395,7 +395,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
               </div>
 
               <div className="flex items-center gap-3">
-                <Calendar className="w-4 h-4 text-blue-400" />
+                <Calendar className="w-4 h-4 text-yellow-400" />
                 <div>
                   <span className="block text-[8px] text-gray-500 uppercase">BUSINESS WORK-HOURS</span>
                   <span className="block text-white font-sans font-medium">
@@ -415,7 +415,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
           <div className="mt-16 pt-12 border-t border-white/10">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-blue-400" />
+                <AlertCircle className="w-5 h-5 text-yellow-400" />
                 <h3 className="font-display font-bold text-lg text-white">Your Registered Agency Tickets</h3>
               </div>
               <button
@@ -446,7 +446,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
 
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {inq.projectTypes.map((t, idx) => (
-                      <span key={idx} className="px-2 py-0.5 rounded bg-blue-500/5 text-[9px] font-mono text-blue-300 border border-blue-500/10">
+                      <span key={idx} className="px-2 py-0.5 rounded bg-yellow-500/5 text-[9px] font-mono text-yellow-300 border border-yellow-500/10">
                         {t}
                       </span>
                     ))}
@@ -480,7 +480,7 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
             </button>
 
             <div className="text-center mb-6">
-              <div className="w-12 h-12 rounded-full bg-blue-500/10 border border-blue-400/20 flex items-center justify-center text-blue-400 mx-auto mb-3">
+              <div className="w-12 h-12 rounded-full bg-yellow-500/10 border border-yellow-400/20 flex items-center justify-center text-yellow-400 mx-auto mb-3">
                 <Calendar className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-display font-bold text-white">Select Consultation Time</h3>
