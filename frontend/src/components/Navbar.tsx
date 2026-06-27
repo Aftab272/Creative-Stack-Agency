@@ -69,8 +69,8 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
       id="main-nav"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-agency-bg/80 backdrop-blur-md border-b border-white/5 shadow-xl"
-          : "py-6 bg-transparent"
+          ? "py-3 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-xl"
+          : "py-6 bg-black"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -134,11 +134,10 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
         <div className="hidden sm:flex items-center gap-4">
           <button
             onClick={onStartProjectClick}
-            className="group relative px-5 py-2.5 rounded-lg bg-yellow-500 text-black font-display font-semibold text-sm tracking-wide overflow-hidden shadow-[0_4px_20px_-4px_rgba(234,179,8,0.3)] hover:shadow-[0_8px_30px_-4px_rgba(234,179,8,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-yellow-500/20"
+            className="group relative px-6 py-2.5 rounded-none border border-yellow-500 bg-transparent text-yellow-500 hover:bg-yellow-500 hover:text-black font-display font-semibold text-sm tracking-wide transition-all duration-300"
           >
-            <div className="absolute inset-0 w-0 bg-gradient-to-r from-yellow-600 to-yellow-400 transition-all duration-500 ease-out group-hover:w-full" />
             <span className="relative z-10 flex items-center gap-1.5 transition-colors duration-300">
-              Start Your Project
+              GET A QUOTE
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
@@ -189,9 +188,9 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
             setIsMenuOpen(false);
             onStartProjectClick();
           }}
-          className="w-full py-3.5 text-center rounded-lg bg-yellow-500 hover:bg-yellow-400 text-black font-display font-semibold transition-colors shadow-lg"
+          className="w-full py-3.5 text-center rounded-none border border-yellow-500 bg-transparent hover:bg-yellow-500 text-yellow-500 hover:text-black font-display font-semibold transition-colors shadow-lg"
         >
-          Start Your Project
+          GET A QUOTE
         </button>
       </div>
     </nav>

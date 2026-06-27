@@ -71,7 +71,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-transparent text-gray-100 overflow-x-hidden selection:bg-blue-600 selection:text-white">
+    <div className="relative min-h-screen bg-transparent text-gray-900 overflow-x-hidden selection:bg-blue-600 selection:text-white">
       
       <AnimatedBackground />
 
