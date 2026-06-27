@@ -57,7 +57,7 @@ export default function TeamSection() {
             
             <motion.div 
               whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.15)", borderColor: "rgba(59,130,246,0.3)" }}
-              className="relative rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
+              className="relative rounded-3xl bg-[#0B0B0B] border border-white/10 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
             >
               {/* Outer hover border glow absolute layer */}
               <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
@@ -91,24 +91,24 @@ export default function TeamSection() {
                     {founder.experience.toUpperCase()}
                   </div>
 
-                  <h4 className="text-3xl font-display font-bold text-gray-900 tracking-tight">
+                  <h4 className="text-3xl font-display font-bold text-white tracking-tight">
                     {founder.name}
                   </h4>
                   
-                  <p className="text-blue-600 font-display text-sm font-medium mt-1">
+                  <p className="text-blue-500 font-display text-sm font-medium mt-1">
                     {founder.role}
                   </p>
 
-                  <p className="text-gray-600 text-sm mt-4 leading-relaxed font-normal">
+                  <p className="text-gray-300 text-sm mt-4 leading-relaxed font-normal">
                     {founder.bio}
                   </p>
 
                   {/* Skills Grid */}
                   <div className="mt-6">
-                    <span className="font-mono text-[9px] text-gray-500 tracking-wider block mb-3 uppercase font-semibold">CORE ARCHITECTURE MASTERY:</span>
+                    <span className="font-mono text-[9px] text-gray-400 tracking-wider block mb-3 uppercase font-semibold">CORE ARCHITECTURE MASTERY:</span>
                     <div className="flex flex-wrap gap-2">
                       {founder.skills.map((skill, index) => (
-                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-700 font-medium">
+                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] font-mono text-gray-300 font-medium">
                           <CheckCircle className="w-3 h-3 text-blue-500" />
                           {skill}
                         </div>
@@ -220,7 +220,7 @@ export default function TeamSection() {
             
             <motion.div 
               whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.15)", borderColor: "rgba(168,85,247,0.3)" }}
-              className="relative rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
+              className="relative rounded-3xl bg-[#0B0B0B] border border-white/10 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
             >
               {/* Outer hover border glow layer */}
               <div className="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
@@ -254,24 +254,24 @@ export default function TeamSection() {
                     {cofounder.experience.toUpperCase()}
                   </div>
 
-                  <h4 className="text-3xl font-display font-bold text-gray-900 tracking-tight">
+                  <h4 className="text-3xl font-display font-bold text-white tracking-tight">
                     {cofounder.name}
                   </h4>
                   
-                  <p className="text-purple-600 font-display text-sm font-medium mt-1">
+                  <p className="text-purple-500 font-display text-sm font-medium mt-1">
                     {cofounder.role}
                   </p>
 
-                  <p className="text-gray-600 text-sm mt-4 leading-relaxed font-normal">
+                  <p className="text-gray-300 text-sm mt-4 leading-relaxed font-normal">
                     {cofounder.bio}
                   </p>
 
                   {/* Skills Grid */}
                   <div className="mt-6">
-                    <span className="font-mono text-[9px] text-gray-500 tracking-wider block mb-3 uppercase font-semibold">CO-FOUNDER & KEY EXPERT MASTERY:</span>
+                    <span className="font-mono text-[9px] text-gray-400 tracking-wider block mb-3 uppercase font-semibold">CO-FOUNDER & KEY EXPERT MASTERY:</span>
                     <div className="flex flex-wrap gap-2">
                       {cofounder.skills.slice(0, 6).map((skill: string, index: number) => (
-                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-700 font-medium">
+                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] font-mono text-gray-300 font-medium">
                           <CheckCircle className="w-3 h-3 text-purple-500" />
                           {skill}
                         </div>

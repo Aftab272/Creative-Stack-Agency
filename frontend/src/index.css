@@ -63,16 +63,23 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #0b0b0b;
+  color: #ffffff;
 }
 
 body {
   overflow-x: hidden;
   font-family: var(--font-sans);
-  background-color: #ffffff;
-  /* Replaced fixed background to avoid GPU repainting glitches on Android */
+  background-color: #0b0b0b;
   position: relative;
+  overscroll-behavior-y: none;
+}
+
+/* Fix Android mobile GPU glitching caused by excessive filters */
+@media (max-width: 768px) {
+  .blur-\[120px\], .blur-\[150px\], .blur-\[100px\], .blur-\[110px\], .blur-\[140px\] {
+    display: none !important;
+  }
 }
 
 /* Pseudo-element for fixed background gradient without layout thrashing */
@@ -89,18 +96,28 @@ body::before {
 
 /* Glassmorphism utility classes aligned with Sleek Theme */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(11, 11, 11, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
 }
 
+@media (min-width: 768px) {
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
 .glass-effect-light {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(11, 11, 11, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .glass-effect-light {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 
 .glass-card-hover {

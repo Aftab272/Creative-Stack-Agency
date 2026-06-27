@@ -111,7 +111,7 @@ const STORIES_DATA: AgencyStory[] = [
     subtitle: "2.5k Commits • Repositories",
     ctaText: "Inspect Repositories",
     visitUrl: "https://github.com/creativestackagency",
-    brandColor: "#ffffff",
+    brandColor: "#24292e",
     accentBg: "from-slate-800/10 to-gray-900/10",
     backgroundImage: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?auto=format&fit=crop&w=800&q=80",
     caption: "💻 High-performance open-source libraries, clean React boilerplates, and developer deployment files.",
@@ -373,12 +373,12 @@ export default function TestimonialsSection() {
           <div className="lg:col-span-7 space-y-6">
             
             {isFormOpen ? (
-              <div className="relative rounded-2xl bg-white border border-gray-100 p-8 shadow-xl backdrop-blur-sm animate-fade-in">
-                <div className="absolute top-6 right-6 font-mono text-[9px] text-blue-700 font-bold bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">
+              <div className="relative rounded-2xl bg-[#0B0B0B] border border-white/10 p-8 shadow-xl backdrop-blur-sm animate-fade-in">
+                <div className="absolute top-6 right-6 font-mono text-[9px] text-blue-400 font-bold bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">
                   NEW REVIEW
                 </div>
                 
-                <h3 className="font-display font-bold text-lg text-gray-900 mb-1 flex items-center gap-2">
+                <h3 className="font-display font-bold text-lg text-white mb-1 flex items-center gap-2">
                   <span>Elite Experience Submission</span>
                   <Award className="w-4 h-4 text-yellow-500" />
                 </h3>
@@ -485,7 +485,7 @@ export default function TestimonialsSection() {
                       <button
                         type="button"
                         onClick={() => setIsFormOpen(false)}
-                        className="px-4 py-2 rounded-xl text-xs font-mono border border-gray-200 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
+                        className="px-4 py-2 rounded-xl text-xs font-mono border border-white/10 text-gray-400 hover:text-white transition-colors cursor-pointer"
                       >
                         CANCEL
                       </button>
@@ -501,8 +501,8 @@ export default function TestimonialsSection() {
                 )}
               </div>
             ) : (
-              <div className="relative rounded-2xl bg-white border border-gray-100 p-8 shadow-xl animate-fade-in">
-                <Quote className="absolute top-6 right-6 w-16 h-16 text-gray-100 pointer-events-none" />
+              <div className="relative rounded-2xl bg-[#0B0B0B] border border-white/10 p-8 shadow-xl animate-fade-in">
+                <Quote className="absolute top-6 right-6 w-16 h-16 text-white/5 pointer-events-none" />
 
                 {/* Stars render */}
                 <div className="flex items-center gap-1 mb-6">
@@ -512,23 +512,23 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Quote block */}
-                <blockquote className="text-gray-900 text-md sm:text-lg leading-relaxed font-normal mb-8 italic">
+                <blockquote className="text-gray-200 text-md sm:text-lg leading-relaxed font-normal mb-8 italic">
                   "{activeReview.quote}"
                 </blockquote>
 
                 {/* Client info bar */}
-                <div className="flex items-center justify-between border-t border-gray-100 pt-6">
+                <div className="flex items-center justify-between border-t border-white/10 pt-6">
                   
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center font-display font-bold text-blue-700 text-sm">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center font-display font-bold text-blue-400 text-sm">
                       {activeReview.clientName.charAt(0)}
                     </div>
                     <div>
-                      <span className="block font-display font-bold text-gray-900 text-sm">
+                      <span className="block font-display font-bold text-white text-sm">
                         {activeReview.clientName}
                       </span>
-                      <span className="block text-[11px] text-gray-600 font-mono">
-                        {activeReview.role} at <span className="text-blue-600 font-medium">{activeReview.companyName}</span>
+                      <span className="block text-[11px] text-gray-400 font-mono">
+                        {activeReview.role} at <span className="text-blue-400 font-medium">{activeReview.companyName}</span>
                       </span>
                     </div>
                   </div>
@@ -558,8 +558,8 @@ export default function TestimonialsSection() {
                   }}
                   className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border cursor-pointer ${
                     activeReviewId === rev.id && !isFormOpen
-                      ? "bg-blue-50 border-blue-200 text-blue-700 font-semibold"
-                      : "bg-white border-gray-100 text-gray-500 hover:text-gray-900"
+                      ? "bg-blue-500/10 border-blue-500/20 text-blue-400 font-semibold"
+                      : "bg-[#0B0B0B] border-white/10 text-gray-400 hover:text-white"
                   }`}
                 >
                   {rev.companyName.toUpperCase()}
@@ -571,7 +571,7 @@ export default function TestimonialsSection() {
                 className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border cursor-pointer flex items-center gap-1.5 ${
                   isFormOpen
                     ? "bg-blue-600 text-white border-blue-600 font-semibold shadow-sm animate-pulse"
-                    : "bg-white border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700 shadow-sm"
+                    : "bg-[#0B0B0B] border-blue-500/30 text-blue-400 hover:border-blue-500 hover:text-blue-300 shadow-sm"
                 }`}
               >
                 <span>{isFormOpen ? "VIEW REVIEWS" : "✍️ WRITE REVIEW"}</span>

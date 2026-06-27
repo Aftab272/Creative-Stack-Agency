@@ -77,7 +77,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
                 className={`group relative rounded-2xl flex flex-col justify-between transition-all duration-300 p-8 ${
                   isGrowth
                     ? "bg-[#0b0b0bed] border-2 border-blue-500/40 shadow-[0_20px_50px_rgba(59,130,246,0.15)] ring-1 ring-blue-500/10 -translate-y-2 lg:-translate-y-4"
-                    : "bg-agency-card border border-white/5 hover:border-white/15 shadow-xl"
+                    : "bg-[#0B0B0B] border border-white/10 hover:border-white/20 shadow-xl"
                 }`}
               >
                 {/* Floating Best Choice badge if Growth */}
