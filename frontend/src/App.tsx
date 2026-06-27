@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Navbar from "./components/Navbar";
 import LeftFloatingContact from "./components/LeftFloatingContact";
@@ -6,21 +6,23 @@ import HeroSection from "./components/HeroSection";
 import ClientLogos from "./components/ClientLogos";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
-import PortfolioSection from "./components/PortfolioSection";
-import TeamSection from "./components/TeamSection";
-import QuizSection from "./components/QuizSection";
-import CoursesSection from "./components/CoursesSection";
-import ProcessSection from "./components/ProcessSection";
-import SocialSection from "./components/SocialSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import PricingSection from "./components/PricingSection";
-import ContactSection from "./components/ContactSection";
-import AdmissionFormSection from "./components/AdmissionFormSection";
-import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
 import LoadingScreen from "./components/LoadingScreen";
 import AnimatedBackground from "./components/AnimatedBackground";
-import RepeatCTA from "./components/RepeatCTA";
+
+// Lazy load below-the-fold components for performance
+const PortfolioSection = lazy(() => import("./components/PortfolioSection"));
+const TeamSection = lazy(() => import("./components/TeamSection"));
+const QuizSection = lazy(() => import("./components/QuizSection"));
+const CoursesSection = lazy(() => import("./components/CoursesSection"));
+const ProcessSection = lazy(() => import("./components/ProcessSection"));
+const SocialSection = lazy(() => import("./components/SocialSection"));
+const TestimonialsSection = lazy(() => import("./components/TestimonialsSection"));
+const PricingSection = lazy(() => import("./components/PricingSection"));
+const ContactSection = lazy(() => import("./components/ContactSection"));
+const AdmissionFormSection = lazy(() => import("./components/AdmissionFormSection"));
+const RepeatCTA = lazy(() => import("./components/RepeatCTA"));
+const Footer = lazy(() => import("./components/Footer"));
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -110,47 +112,51 @@ export default function App() {
         {/* Services Glass cards listings */}
         <ServicesSection onStartProjectClick={handleJumpToContactDirectly} />
 
-        {/* Portfolios filters cases grids and Case Study Modals */}
-        <PortfolioSection />
+        <Suspense fallback={<div className="h-24 w-full flex items-center justify-center text-gray-400">Loading...</div>}>
+          {/* Portfolios filters cases grids and Case Study Modals */}
+          <PortfolioSection />
 
-        <RepeatCTA onStartProjectClick={handleJumpToContactDirectly} title="Ready to scale your enterprise?" subtitle="We build custom digital architectures designed for growth." />
+          <RepeatCTA onStartProjectClick={handleJumpToContactDirectly} title="Ready to scale your enterprise?" subtitle="We build custom digital architectures designed for growth." />
 
-        {/* Team Founder spotlights and expert cards grids */}
-        <TeamSection />
+          {/* Team Founder spotlights and expert cards grids */}
+          <TeamSection />
 
-        {/* Dynamic Entry quiz assessments section */}
-        <QuizSection />
+          {/* Dynamic Entry quiz assessments section */}
+          <QuizSection />
 
-        {/* Dynamic Entry online software courses section */}
-        <CoursesSection />
+          {/* Dynamic Entry online software courses section */}
+          <CoursesSection />
 
-        {/* Admissions Application Form */}
-        <AdmissionFormSection />
+          {/* Admissions Application Form */}
+          <AdmissionFormSection />
 
-        {/* Progress scrolling timelines block */}
-        <ProcessSection />
+          {/* Progress scrolling timelines block */}
+          <ProcessSection />
 
-        <RepeatCTA onStartProjectClick={handleJumpToContactDirectly} title="Let's build something extraordinary." subtitle="Book a discovery call to audit your current ecosystem." />
+          <RepeatCTA onStartProjectClick={handleJumpToContactDirectly} title="Let's build something extraordinary." subtitle="Book a discovery call to audit your current ecosystem." />
 
-        {/* Bento grids Social Directory connects */}
-        <SocialSection />
+          {/* Bento grids Social Directory connects */}
+          <SocialSection />
 
-        {/* Testimonial panels and client video player mockups */}
-        <TestimonialsSection />
+          {/* Testimonial panels and client video player mockups */}
+          <TestimonialsSection />
 
-        {/* Tiers catalog grids list */}
-        <PricingSection onPlanSelect={handlePlanSelectionSync} />
+          {/* Tiers catalog grids list */}
+          <PricingSection onPlanSelect={handlePlanSelectionSync} />
 
-        {/* Onboarding forms & response hubs */}
-        <ContactSection
-          selectedPlanId={selectedPlanId}
-          selectedBudgetTag={selectedBudgetTag}
-          onClearPlanSelect={handleClearPlanSelect}
-        />
+          {/* Onboarding forms & response hubs */}
+          <ContactSection
+            selectedPlanId={selectedPlanId}
+            selectedBudgetTag={selectedBudgetTag}
+            onClearPlanSelect={handleClearPlanSelect}
+          />
+        </Suspense>
       </main>
 
       {/* Global edge distributed footer details block */}
-      <Footer />
+      <Suspense fallback={<div />}>
+        <Footer />
+      </Suspense>
 
     </div>
   );
