@@ -34,10 +34,10 @@ export default function TeamSection() {
             <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
             The Human Capital
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-4">
-            Meet The Creative Minds<span className="text-blue-500">.</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight mb-4">
+            Meet The Creative Minds
           </h2>
-          <p className="text-gray-400 text-sm font-light leading-relaxed">
+          <p className="text-gray-600 text-sm font-normal leading-relaxed">
             A cohesive squad of world-class developers, conversion designers, semantic SEO experts, and product strategy leads working together under a unified standard of craftsmanship.
           </p>
         </motion.div>
@@ -56,12 +56,11 @@ export default function TeamSection() {
             </h3>
             
             <motion.div 
-              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.25)", borderColor: "rgba(59,130,246,0.5)" }}
-              className="relative rounded-3xl bg-agency-card border border-white/10 overflow-hidden shadow-2xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
+              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.15)", borderColor: "rgba(59,130,246,0.3)" }}
+              className="relative rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
             >
               {/* Outer hover border glow absolute layer */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
-              <div className="absolute inset-0 bg-white/[0.01] pointer-events-none" />
+              <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
@@ -92,15 +91,15 @@ export default function TeamSection() {
                     {founder.experience.toUpperCase()}
                   </div>
 
-                  <h4 className="text-3xl font-display font-bold text-white tracking-tight">
+                  <h4 className="text-3xl font-display font-bold text-gray-900 tracking-tight">
                     {founder.name}
                   </h4>
                   
-                  <p className="text-blue-400 font-display text-sm font-medium mt-1">
+                  <p className="text-blue-600 font-display text-sm font-medium mt-1">
                     {founder.role}
                   </p>
 
-                  <p className="text-gray-300 text-xs mt-4 leading-relaxed font-light">
+                  <p className="text-gray-600 text-sm mt-4 leading-relaxed font-normal">
                     {founder.bio}
                   </p>
 
@@ -109,8 +108,8 @@ export default function TeamSection() {
                     <span className="font-mono text-[9px] text-gray-500 tracking-wider block mb-3 uppercase font-semibold">CORE ARCHITECTURE MASTERY:</span>
                     <div className="flex flex-wrap gap-2">
                       {founder.skills.map((skill, index) => (
-                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-[11px] font-mono text-gray-300 font-light">
-                          <CheckCircle className="w-3 h-3 text-blue-400" />
+                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-700 font-medium">
+                          <CheckCircle className="w-3 h-3 text-blue-500" />
                           {skill}
                         </div>
                       ))}
@@ -220,12 +219,11 @@ export default function TeamSection() {
             </h3>
             
             <motion.div 
-              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.25)", borderColor: "rgba(168,85,247,0.5)" }}
-              className="relative rounded-3xl bg-agency-card border border-white/10 overflow-hidden shadow-2xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
+              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.15)", borderColor: "rgba(168,85,247,0.3)" }}
+              className="relative rounded-3xl bg-white border border-gray-100 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
             >
               {/* Outer hover border glow layer */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
-              <div className="absolute inset-0 bg-white/[0.01] pointer-events-none" />
+              <div className="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
@@ -256,15 +254,15 @@ export default function TeamSection() {
                     {cofounder.experience.toUpperCase()}
                   </div>
 
-                  <h4 className="text-3xl font-display font-bold text-white tracking-tight">
+                  <h4 className="text-3xl font-display font-bold text-gray-900 tracking-tight">
                     {cofounder.name}
                   </h4>
                   
-                  <p className="text-purple-400 font-display text-sm font-medium mt-1">
+                  <p className="text-purple-600 font-display text-sm font-medium mt-1">
                     {cofounder.role}
                   </p>
 
-                  <p className="text-gray-300 text-xs mt-4 leading-relaxed font-light">
+                  <p className="text-gray-600 text-sm mt-4 leading-relaxed font-normal">
                     {cofounder.bio}
                   </p>
 
@@ -273,8 +271,8 @@ export default function TeamSection() {
                     <span className="font-mono text-[9px] text-gray-500 tracking-wider block mb-3 uppercase font-semibold">CO-FOUNDER & KEY EXPERT MASTERY:</span>
                     <div className="flex flex-wrap gap-2">
                       {cofounder.skills.slice(0, 6).map((skill: string, index: number) => (
-                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-[11px] font-mono text-gray-300 font-light">
-                          <CheckCircle className="w-3 h-3 text-purple-400" />
+                        <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-700 font-medium">
+                          <CheckCircle className="w-3 h-3 text-purple-500" />
                           {skill}
                         </div>
                       ))}
@@ -365,17 +363,17 @@ export default function TeamSection() {
             {experts.map((member) => (
               <motion.div
                 variants={cardVariants}
-                whileHover={{ y: -5, borderColor: "rgba(59,130,246,0.5)", boxShadow: "0 20px 40px -10px rgba(0,0,0,0.5)" }}
+                whileHover={{ y: -5, borderColor: "rgba(59,130,246,0.3)", boxShadow: "0 20px 40px -10px rgba(0,0,0,0.1)" }}
                 key={member.id}
-                className="group relative rounded-2xl bg-[#0a0a0ade] border border-white/5 hover:border-blue-500/20 p-6 flex flex-col justify-between transition-all duration-300 shadow-xl min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
+                className="group relative rounded-2xl bg-white border border-gray-100 hover:border-blue-500/20 p-6 flex flex-col justify-between transition-all duration-300 shadow-lg min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
               >
                 {/* Visual Glass highlights */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+                <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
 
-                <div>
+                <div className="relative z-10">
                   {/* Photo & Core Bio Header */}
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="relative w-24 h-24 rounded-xl overflow-hidden border border-white/10 bg-[#111] flex-shrink-0">
+                    <div className="relative w-24 h-24 rounded-xl overflow-hidden border border-gray-200 bg-gray-100 flex-shrink-0">
                       <img
                         src={member.avatarUrl}
                         alt={member.name}
@@ -384,14 +382,14 @@ export default function TeamSection() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-lg text-white group-hover:text-blue-300 transition-colors">
+                      <h4 className="font-display font-bold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
                         {member.name}
                       </h4>
-                      <span className="text-xs text-gray-400 font-mono italic block">{member.role}</span>
+                      <span className="text-xs text-gray-500 font-mono italic block">{member.role}</span>
                     </div>
                   </div>
 
-                  <p className="text-gray-400 text-xs leading-relaxed font-light mb-6">
+                  <p className="text-gray-600 text-sm leading-relaxed font-normal mb-6">
                     {member.bio}
                   </p>
 
@@ -424,11 +422,11 @@ export default function TeamSection() {
                   )}
 
                   {/* Skills lists */}
-                  <div className="mb-6">
+                  <div className="mb-6 relative z-10">
                     <span className="text-[10px] uppercase font-mono text-gray-500 tracking-wider block mb-2 font-medium">SPECIALTIES:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {member.skills.map((skill, idx) => (
-                        <span key={idx} className="px-2 py-0.5 rounded bg-white/5 text-[10px] font-mono text-gray-300">
+                        <span key={idx} className="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-mono text-gray-600">
                           {skill}
                         </span>
                       ))}
@@ -437,9 +435,9 @@ export default function TeamSection() {
                 </div>
 
                 {/* Footer and personal Social icons */}
-                <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                <div className="relative z-10 flex items-center justify-between pt-4 border-t border-gray-100">
                   <span className="text-[10px] font-mono text-gray-500">{member.experience}</span>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-gray-400">
                     {member.socialLinks.linkedin && (
                       <a href={member.socialLinks.linkedin} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
                         <Linkedin className="w-3.5 h-3.5" />

@@ -45,16 +45,16 @@ export default function PortfolioSection() {
               <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
               CASE STUDIES
             </div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
-              Crafted Interfaces. Massive Scale<span className="text-yellow-500">.</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight">
+              Crafted Interfaces. Massive Scale
             </h2>
-            <p className="text-gray-400 text-sm mt-3 font-light leading-relaxed">
+            <p className="text-gray-600 text-sm mt-3 font-normal leading-relaxed">
               Explore our record of high-performance technical engineering, luxury visual branding, headless commerce systems, and search-dominant SEO acquisitions.
             </p>
           </div>
 
           {/* Interactive Category Filter Menu */}
-          <div className="flex flex-nowrap bg-white/5 rounded-xl border border-white/5 overflow-x-auto md:overflow-visible no-scrollbar p-1">
+          <div className="flex flex-nowrap bg-gray-50 rounded-xl border border-gray-100 overflow-x-auto md:overflow-visible no-scrollbar p-1">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -62,7 +62,7 @@ export default function PortfolioSection() {
                 className={`px-4 py-2 rounded-lg text-xs font-medium tracking-wider transition-all duration-350 cursor-pointer flex-shrink-0 ${
                   selectedCategory === cat
                     ? "bg-yellow-500 text-black shadow-md font-semibold"
-                    : "text-gray-400 hover:text-white hover:bg-white/5"
+                    : "text-gray-500 hover:text-gray-900 hover:bg-gray-100"
                 }`}
               >
                 {cat.toUpperCase()}
@@ -90,7 +90,7 @@ export default function PortfolioSection() {
                 layout
                 whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(234,179,8,0.15)" }}
                 key={project.id}
-                className="group interactive-hover relative rounded-2xl bg-agency-card border border-white/5 hover:border-yellow-400/20 overflow-hidden shadow-2xl transition-colors duration-500 flex flex-col justify-between min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
+                className="group interactive-hover relative rounded-2xl bg-white border border-gray-100 hover:border-yellow-400/20 overflow-hidden shadow-xl transition-colors duration-500 flex flex-col justify-between min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
               >
               {/* Image Preview Container */}
               <div className="relative h-56 w-full overflow-hidden bg-[#111]">
@@ -128,21 +128,21 @@ export default function PortfolioSection() {
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
                   <span className="font-mono text-[9px] text-gray-500 uppercase tracking-widest">{project.clientName}</span>
-                  <h3 className="font-display font-bold text-xl text-white mt-1 group-hover:text-blue-200 transition-colors">
+                  <h3 className="font-display font-bold text-xl text-gray-900 mt-1 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 text-xs mt-3 line-clamp-2 leading-relaxed font-light">
+                  <p className="text-gray-600 text-xs mt-3 line-clamp-2 leading-relaxed font-normal">
                     {project.description}
                   </p>
                 </div>
 
                 {/* Quantifiable Results Panel */}
-                <div className="mt-6 pt-4 border-t border-white/5 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                  <span className="font-mono text-[8px] text-yellow-400 tracking-wider block mb-1.5 uppercase font-bold">CORE CAMPAIGN IMPACT:</span>
+                <div className="mt-6 pt-4 border-t border-gray-100 bg-gray-50 p-3 rounded-xl">
+                  <span className="font-mono text-[8px] text-yellow-600 tracking-wider block mb-1.5 uppercase font-bold">CORE CAMPAIGN IMPACT:</span>
                   <ul className="space-y-1">
                     {project.results.slice(0, 2).map((res, index) => (
-                      <li key={index} className="text-[10px] text-gray-300 font-medium flex items-center gap-1.5 font-sans">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                      <li key={index} className="text-[10px] text-gray-700 font-medium flex items-center gap-1.5 font-sans">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
                         <span className="truncate">{res}</span>
                       </li>
                     ))}
@@ -160,12 +160,12 @@ export default function PortfolioSection() {
                   </button>
                   <div className="flex items-center gap-3 shrink-0">
                     {project.githubUrl && (
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
                         <Github className="w-4 h-4" />
                       </a>
                     )}
                     {project.liveUrl && (
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-400 transition-colors tooltip group/live-btn inline-flex items-center gap-1.5">
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-emerald-500 transition-colors tooltip group/live-btn inline-flex items-center gap-1.5">
                         <span className="text-[10px] uppercase font-bold text-emerald-400 md:hidden group-hover/live-btn:block transition-all">Live</span>
                         <ExternalLink className="w-4 h-4" />
                       </a>
@@ -183,17 +183,17 @@ export default function PortfolioSection() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-center py-24 px-6 border border-white/5 rounded-3xl bg-agency-card mt-8 flex flex-col items-center justify-center shadow-2xl relative overflow-hidden"
+            className="text-center py-24 px-6 border border-gray-100 rounded-3xl bg-white mt-8 flex flex-col items-center justify-center shadow-xl relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-900/10 via-transparent to-transparent opacity-50" />
-            <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 relative z-10">
-              <Sparkles className="w-6 h-6 text-yellow-400 opacity-50" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-500/10 via-transparent to-transparent opacity-50" />
+            <div className="w-16 h-16 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-6 relative z-10">
+              <Sparkles className="w-6 h-6 text-yellow-500 opacity-50" />
             </div>
-            <h3 className="text-xl font-display font-bold text-white mb-2 relative z-10">No projects found</h3>
-            <p className="text-gray-400 font-light text-sm max-w-sm mb-6 relative z-10">We couldn't find any case studies matching the "{selectedCategory}" category right now.</p>
+            <h3 className="text-xl font-display font-bold text-gray-900 mb-2 relative z-10">No projects found</h3>
+            <p className="text-gray-600 font-normal text-sm max-w-sm mb-6 relative z-10">We couldn't find any case studies matching the "{selectedCategory}" category right now.</p>
             <button
               onClick={() => setSelectedCategory("All")}
-              className="px-6 py-2.5 rounded-full border border-yellow-500/20 bg-yellow-500/10 text-yellow-400 text-xs font-mono font-medium hover:bg-yellow-500/20 hover:text-yellow-300 transition-colors relative z-10"
+              className="px-6 py-2.5 rounded-full border border-yellow-500/20 bg-yellow-500/10 text-yellow-600 text-xs font-mono font-medium hover:bg-yellow-500/20 hover:text-yellow-700 transition-colors relative z-10"
             >
               Clear Filters
             </button>
