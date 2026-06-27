@@ -1,5 +1,6 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { useState, Suspense, lazy, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import LeftFloatingContact from "./components/LeftFloatingContact";
 import HeroSection from "./components/HeroSection";
@@ -9,6 +10,7 @@ import ServicesSection from "./components/ServicesSection";
 import CustomCursor from "./components/CustomCursor";
 import LoadingScreen from "./components/LoadingScreen";
 import AnimatedBackground from "./components/AnimatedBackground";
+import FloatingAIAssistant from "./components/FloatingAIAssistant";
 
 // Lazy load below-the-fold components for performance
 const PortfolioSection = lazy(() => import("./components/PortfolioSection"));
@@ -26,6 +28,30 @@ const Footer = lazy(() => import("./components/Footer"));
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
+
+  // Initialize Lenis Smooth Scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
+      gestureOrientation: "vertical",
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
   
   // Sync state between Pricing selects and Contact Form inputs
   const [selectedPlanId, setSelectedPlanId] = useState<string>("");
@@ -94,6 +120,9 @@ export default function App() {
 
       {/* 4. Left Pinned Floating Social Capsules */}
       <LeftFloatingContact />
+
+      {/* 5. Premium Global AI Assistant */}
+      <FloatingAIAssistant />
 
       {/* Core Scaffolding Viewport sections */}
       <main>
