@@ -348,14 +348,14 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="relative py-28 bg-transparent overflow-hidden border-t border-white/5">
       {/* Background radial spotlight circles */}
       <div className="absolute top-1/4 right-[5%] w-[450px] h-[450px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 left-[5%] w-[400px] h-[400px] bg-blue-500/5 blur-[110px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 left-[5%] w-[400px] h-[400px] bg-yellow-500/5 blur-[110px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full mb-4 font-mono text-[10px] uppercase text-blue-700 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-yellow-500 font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-500" />
             REVIEWS & STORIES
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight mb-4 animate-float">
@@ -374,7 +374,7 @@ export default function TestimonialsSection() {
             
             {isFormOpen ? (
               <div className="relative rounded-2xl bg-[#0B0B0B] border border-white/10 p-8 shadow-xl backdrop-blur-sm animate-fade-in">
-                <div className="absolute top-6 right-6 font-mono text-[9px] text-blue-400 font-bold bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">
+                <div className="absolute top-6 right-6 font-mono text-[9px] text-yellow-500 font-bold bg-yellow-500/10 px-2.5 py-1 rounded-md border border-yellow-500/20">
                   NEW REVIEW
                 </div>
                 
@@ -405,7 +405,7 @@ export default function TestimonialsSection() {
                           value={newClientName}
                           onChange={(e) => setNewClientName(e.target.value)}
                           placeholder="e.g. Aftab Akram"
-                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors ${
+                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-yellow-500 focus:outline-none transition-colors ${
                             errors.clientName ? "border-red-500" : "border-gray-200"
                           }`}
                         />
@@ -419,7 +419,7 @@ export default function TestimonialsSection() {
                           value={newRole}
                           onChange={(e) => setNewRole(e.target.value)}
                           placeholder="e.g. Founder & CEO"
-                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors ${
+                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-yellow-500 focus:outline-none transition-colors ${
                             errors.role ? "border-red-500" : "border-gray-200"
                           }`}
                         />
@@ -435,7 +435,7 @@ export default function TestimonialsSection() {
                           value={newCompanyName}
                           onChange={(e) => setNewCompanyName(e.target.value)}
                           placeholder="e.g. Creative Stack Agency"
-                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors ${
+                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-yellow-500 focus:outline-none transition-colors ${
                             errors.companyName ? "border-red-500" : "border-gray-200"
                           }`}
                         />
@@ -474,7 +474,7 @@ export default function TestimonialsSection() {
                         onChange={(e) => setNewQuote(e.target.value)}
                         placeholder="Describe your design aesthetics, speed, conversion rates, or milestones delivered by our elite team..."
                         rows={3}
-                        className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors resize-none ${
+                        className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-yellow-500 focus:outline-none transition-colors resize-none ${
                           errors.quote ? "border-red-500" : "border-gray-200"
                         }`}
                       />
@@ -491,7 +491,7 @@ export default function TestimonialsSection() {
                       </button>
                       <button
                         type="submit"
-                        className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-mono font-semibold transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 flex items-center gap-1.5 cursor-pointer"
+                        className="px-5 py-2.5 rounded-xl bg-yellow-500 hover:bg-yellow-400 text-black text-xs font-mono font-semibold transition-all shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/30 flex items-center gap-1.5 cursor-pointer"
                       >
                         <Send className="w-3.5 h-3.5" />
                         SUBMIT ENDORSEMENT
@@ -520,7 +520,7 @@ export default function TestimonialsSection() {
                 <div className="flex items-center justify-between border-t border-white/10 pt-6">
                   
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center font-display font-bold text-blue-400 text-sm">
+                    <div className="w-10 h-10 rounded-full bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center font-display font-bold text-yellow-500 text-sm">
                       {activeReview.clientName.charAt(0)}
                     </div>
                     <div>
@@ -528,7 +528,7 @@ export default function TestimonialsSection() {
                         {activeReview.clientName}
                       </span>
                       <span className="block text-[11px] text-gray-400 font-mono">
-                        {activeReview.role} at <span className="text-blue-400 font-medium">{activeReview.companyName}</span>
+                        {activeReview.role} at <span className="text-yellow-500 font-medium">{activeReview.companyName}</span>
                       </span>
                     </div>
                   </div>
@@ -558,7 +558,7 @@ export default function TestimonialsSection() {
                   }}
                   className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border cursor-pointer ${
                     activeReviewId === rev.id && !isFormOpen
-                      ? "bg-blue-500/10 border-blue-500/20 text-blue-400 font-semibold"
+                      ? "bg-yellow-500/10 border-yellow-500/20 text-yellow-500 font-semibold"
                       : "bg-[#0B0B0B] border-white/10 text-gray-400 hover:text-white"
                   }`}
                 >
@@ -570,8 +570,8 @@ export default function TestimonialsSection() {
                 onClick={() => setIsFormOpen(!isFormOpen)}
                 className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border cursor-pointer flex items-center gap-1.5 ${
                   isFormOpen
-                    ? "bg-blue-600 text-white border-blue-600 font-semibold shadow-sm animate-pulse"
-                    : "bg-[#0B0B0B] border-blue-500/30 text-blue-400 hover:border-blue-500 hover:text-blue-300 shadow-sm"
+                    ? "bg-yellow-500 text-black border-yellow-500 font-semibold shadow-sm animate-pulse"
+                    : "bg-[#0B0B0B] border-yellow-500/30 text-yellow-500 hover:border-yellow-500 hover:text-yellow-400 shadow-sm"
                 }`}
               >
                 <span>{isFormOpen ? "VIEW REVIEWS" : "✍️ WRITE REVIEW"}</span>
@@ -583,7 +583,7 @@ export default function TestimonialsSection() {
           {/* Right Column: Premium Interactive Social Media Stories player mockup */}
           <div className="lg:col-span-5 relative">
             <h3 className="font-display font-medium text-xs text-gray-500 uppercase tracking-widest text-center lg:text-left mb-4 flex items-center justify-center lg:justify-start gap-2">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-yellow-500 animate-ping" />
               ELITE VIDEO STORIES & FEEDS
             </h3>
 
@@ -598,9 +598,9 @@ export default function TestimonialsSection() {
                     className="flex flex-col items-center gap-1.5 focus:outline-none flex-shrink-0 cursor-pointer group"
                   >
                     {/* Ring indicator */}
-                    <div className={`w-11 h-11 rounded-full p-[2px] transition-all duration-300 ${
+                    <div className={`relative w-11 h-11 rounded-full p-[2px] transition-all duration-300 ${
                       isActive 
-                        ? "bg-gradient-to-tr from-blue-500 via-pink-500 to-yellow-400 scale-105" 
+                        ? "bg-gradient-to-tr from-yellow-500 via-yellow-500 to-yellow-300 scale-105" 
                         : "bg-white/10 hover:bg-white/20"
                     }`}>
                       <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-gray-400 group-hover:text-white transition-colors">
@@ -608,7 +608,7 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
                     <span className={`text-[9px] font-mono transition-colors ${
-                      isActive ? "text-blue-400 font-semibold" : "text-gray-500 group-hover:text-gray-300"
+                      isActive ? "text-yellow-500 font-semibold" : "text-gray-500 group-hover:text-gray-300"
                     }`}>
                       {story.id.toUpperCase()}
                     </span>
@@ -970,14 +970,10 @@ export default function TestimonialsSection() {
                   href={activeStory.visitUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full py-3 rounded-xl font-display font-semibold text-xs text-white transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-xl hover:scale-[1.01] pointer-events-auto filter brightness-100 hover:brightness-110 active:scale-95"
-                  style={{ 
-                    backgroundColor: activeStory.brandColor, 
-                    boxShadow: `0 4px 20px ${activeStory.brandColor}30` 
-                  }}
+                  className="w-full py-3.5 rounded-xl font-display font-bold text-sm bg-yellow-500 text-black transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer shadow-lg hover:shadow-xl hover:scale-[1.02] pointer-events-auto active:scale-95"
                 >
                   <span>{activeStory.ctaText}</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-4 h-4" />
                 </a>
 
               </div>

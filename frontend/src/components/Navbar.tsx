@@ -78,7 +78,7 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
   return (
     <nav
       id="main-nav"
-      className={`absolute top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "py-3 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-xl"
           : "py-6 bg-black"
@@ -166,7 +166,7 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed inset-0 w-full h-[100dvh] z-[9999] bg-[#0B0B0B] p-8 pt-24 transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed inset-0 w-full h-[100dvh] z-[9999] bg-[#0B0B0B] p-8 pt-24 transition-transform duration-300 ease-out lg:hidden overflow-y-auto ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

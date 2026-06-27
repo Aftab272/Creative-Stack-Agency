@@ -30,8 +30,8 @@ export default function TeamSection() {
           variants={cardVariants}
           className="text-center max-w-2xl mx-auto mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-blue-300 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-yellow-500 font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-500 animate-pulse" />
             The Human Capital
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight mb-4">
@@ -56,11 +56,11 @@ export default function TeamSection() {
             </h3>
             
             <motion.div 
-              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.15)", borderColor: "rgba(59,130,246,0.3)" }}
+              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.15)", borderColor: "rgba(234,179,8,0.3)" }}
               className="relative rounded-3xl bg-[#0B0B0B] border border-white/10 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
             >
               {/* Outer hover border glow absolute layer */}
-              <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
+              <div className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
@@ -76,7 +76,7 @@ export default function TeamSection() {
                     />
                     
                     {/* Founder Badge */}
-                    <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-blue-500/30 text-[9px] font-mono tracking-widest text-blue-400 uppercase font-semibold">
+                    <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-yellow-500/30 text-[9px] font-mono tracking-widest text-yellow-500 uppercase font-semibold">
                       DIRECTOR
                     </span>
                   </div>
@@ -86,7 +86,7 @@ export default function TeamSection() {
                 <div className="lg:col-span-8 flex flex-col justify-center">
                   
                   {/* Experience block tag */}
-                  <div className="flex items-center gap-2 mb-2 font-mono text-[9px] text-[#3b82f6] font-bold tracking-widest">
+                  <div className="flex items-center gap-2 mb-2 font-mono text-[9px] text-yellow-500 font-bold tracking-widest">
                     <Award className="w-4 h-4" />
                     {founder.experience.toUpperCase()}
                   </div>
@@ -95,7 +95,7 @@ export default function TeamSection() {
                     {founder.name}
                   </h4>
                   
-                  <p className="text-blue-500 font-display text-sm font-medium mt-1">
+                  <p className="text-yellow-500 font-display text-sm font-medium mt-1">
                     {founder.role}
                   </p>
 
@@ -109,7 +109,7 @@ export default function TeamSection() {
                     <div className="flex flex-wrap gap-2">
                       {founder.skills.map((skill, index) => (
                         <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] font-mono text-gray-300 font-medium">
-                          <CheckCircle className="w-3 h-3 text-blue-500" />
+                          <CheckCircle className="w-3 h-3 text-yellow-500" />
                           {skill}
                         </div>
                       ))}
@@ -125,7 +125,7 @@ export default function TeamSection() {
                           href={founder.socialLinks.linkedin}
                           target="_blank"
                           rel="noreferrer"
-                          className="p-2.5 rounded-lg bg-white/5 hover:bg-blue-600 border border-white/5 hover:border-blue-500 text-gray-400 hover:text-white transition-all shadow-md"
+                          className="p-2.5 rounded-lg bg-white/5 hover:bg-yellow-600 border border-white/5 hover:border-yellow-500 text-gray-400 hover:text-black transition-all shadow-md"
                           aria-label="LinkedIn"
                         >
                           <Linkedin className="w-4 h-4" />
@@ -191,9 +191,9 @@ export default function TeamSection() {
 
                   <button
                     onClick={() => setSelectedMember(founder)}
-                    className="mt-6 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 border border-white/10 hover:border-blue-500/30 text-xs font-mono text-blue-400 hover:text-white transition-all text-center flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-md"
+                    className="mt-6 w-full py-3 px-4 rounded-xl bg-yellow-500/10 hover:bg-yellow-500/20 border border-white/10 hover:border-yellow-500/30 text-xs font-mono text-yellow-500 hover:text-yellow-400 transition-all text-center flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-md"
                   >
-                    <Award className="w-4 h-4 text-blue-400" />
+                    <Award className="w-4 h-4 text-yellow-500" />
                     View Creator's Experience & Timeline
                   </button>
 
@@ -219,11 +219,11 @@ export default function TeamSection() {
             </h3>
             
             <motion.div 
-              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.15)", borderColor: "rgba(168,85,247,0.3)" }}
+              whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(234, 179, 8, 0.15)", borderColor: "rgba(234, 179, 8,0.3)" }}
               className="relative rounded-3xl bg-[#0B0B0B] border border-white/10 overflow-hidden shadow-xl p-8 lg:p-12 max-w-5xl mx-auto group transition-colors duration-500"
             >
               {/* Outer hover border glow layer */}
-              <div className="absolute inset-0 bg-purple-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
+              <div className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none" />
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
@@ -239,7 +239,7 @@ export default function TeamSection() {
                     />
                     
                     {/* Co-Founder Badge */}
-                    <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-purple-500/30 text-[9px] font-mono tracking-widest text-purple-400 uppercase font-semibold">
+                    <span className="absolute top-4 left-4 z-20 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-yellow-500/30 text-[9px] font-mono tracking-widest text-yellow-500 uppercase font-semibold">
                       CO-FOUNDER
                     </span>
                   </div>
@@ -249,8 +249,8 @@ export default function TeamSection() {
                 <div className="lg:col-span-8 flex flex-col justify-center">
                   
                   {/* Experience block tag */}
-                  <div className="flex items-center gap-2 mb-2 font-mono text-[9px] text-[#a855f7] font-bold tracking-widest">
-                    <Award className="w-4 h-4 text-purple-400" />
+                  <div className="flex items-center gap-2 mb-2 font-mono text-[9px] text-yellow-500 font-bold tracking-widest">
+                    <Award className="w-4 h-4 text-yellow-500" />
                     {cofounder.experience.toUpperCase()}
                   </div>
 
@@ -258,7 +258,7 @@ export default function TeamSection() {
                     {cofounder.name}
                   </h4>
                   
-                  <p className="text-purple-500 font-display text-sm font-medium mt-1">
+                  <p className="text-yellow-500 font-display text-sm font-medium mt-1">
                     {cofounder.role}
                   </p>
 
@@ -272,7 +272,7 @@ export default function TeamSection() {
                     <div className="flex flex-wrap gap-2">
                       {cofounder.skills.slice(0, 6).map((skill: string, index: number) => (
                         <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[11px] font-mono text-gray-300 font-medium">
-                          <CheckCircle className="w-3 h-3 text-purple-500" />
+                          <CheckCircle className="w-3 h-3 text-yellow-500" />
                           {skill}
                         </div>
                       ))}
@@ -288,7 +288,7 @@ export default function TeamSection() {
                           href={cofounder.socialLinks.linkedin}
                           target="_blank"
                           rel="noreferrer"
-                          className="p-2.5 rounded-lg bg-white/5 hover:bg-blue-600 border border-white/5 hover:border-blue-500 text-gray-400 hover:text-white transition-all shadow-md"
+                          className="p-2.5 rounded-lg bg-white/5 hover:bg-yellow-600 border border-white/5 hover:border-yellow-500 text-gray-400 hover:text-black transition-all shadow-md"
                           aria-label="LinkedIn"
                         >
                           <Linkedin className="w-4 h-4" />
@@ -332,9 +332,9 @@ export default function TeamSection() {
 
                   <button
                     onClick={() => setSelectedMember(cofounder)}
-                    className="mt-6 w-full py-3 px-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 hover:from-purple-500/20 hover:to-blue-500/20 border border-white/10 hover:border-purple-500/30 text-xs font-mono text-purple-400 hover:text-white transition-all text-center flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-md"
+                    className="mt-6 w-full py-3 px-4 rounded-xl bg-yellow-500/10 hover:bg-yellow-500/20 border border-white/10 hover:border-yellow-500/30 text-xs font-mono text-yellow-500 hover:text-yellow-400 transition-all text-center flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-md"
                   >
-                    <Award className="w-4 h-4 text-purple-400" />
+                    <Award className="w-4 h-4 text-yellow-500" />
                     View Co-Founder's Experience & Timeline
                   </button>
 
@@ -363,12 +363,12 @@ export default function TeamSection() {
             {experts.map((member) => (
               <motion.div
                 variants={cardVariants}
-                whileHover={{ y: -5, borderColor: "rgba(59,130,246,0.3)", boxShadow: "0 20px 40px -10px rgba(0,0,0,0.1)" }}
+                whileHover={{ y: -5, borderColor: "rgba(234,179,8,0.3)", boxShadow: "0 20px 40px -10px rgba(0,0,0,0.1)" }}
                 key={member.id}
-                className="group relative rounded-2xl bg-[#0B0B0B] border border-white/10 hover:border-blue-500/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-lg w-full h-full"
+                className="group relative rounded-2xl bg-[#0B0B0B] border border-white/10 hover:border-yellow-500/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-lg w-full h-full"
               >
                 {/* Visual Glass highlights */}
-                <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+                <div className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
 
                 <div className="relative z-10">
                   {/* Photo & Core Bio Header */}
@@ -382,7 +382,7 @@ export default function TeamSection() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-lg text-white group-hover:text-blue-400 transition-colors">
+                      <h4 className="font-display font-bold text-lg text-white group-hover:text-yellow-500 transition-colors">
                         {member.name}
                       </h4>
                       <span className="text-xs text-gray-400 font-mono italic block">{member.role}</span>
@@ -398,22 +398,22 @@ export default function TeamSection() {
                     <div className="mb-6 p-3 rounded-xl bg-white/[0.02] border border-white/5 space-y-2 text-[11px] font-mono text-gray-400">
                       {member.education && (
                         <div className="flex items-center gap-2">
-                          <GraduationCap className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" />
+                          <GraduationCap className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0" />
                           <span className="truncate">{member.education}</span>
                         </div>
                       )}
                       {member.email && (
                         <div className="flex items-center gap-2">
-                          <Mail className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" />
-                          <a href={`mailto:${member.email}`} className="hover:text-blue-300 transition-colors truncate">
+                          <Mail className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0" />
+                          <a href={`mailto:${member.email}`} className="hover:text-yellow-400 transition-colors truncate">
                             {member.email}
                           </a>
                         </div>
                       )}
                       {member.phone && (
                         <div className="flex items-center gap-2">
-                          <Phone className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" />
-                          <a href={`tel:${member.phone}`} className="hover:text-blue-300 transition-colors">
+                          <Phone className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0" />
+                          <a href={`tel:${member.phone}`} className="hover:text-yellow-400 transition-colors">
                             {member.phone}
                           </a>
                         </div>
@@ -473,9 +473,9 @@ export default function TeamSection() {
 
                 <button
                   onClick={() => setSelectedMember(member)}
-                  className="mt-4 w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-blue-600/10 border border-white/5 hover:border-blue-500/20 text-[11px] font-mono text-blue-400 hover:text-white transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+                  className="mt-4 w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-yellow-500/10 border border-white/5 hover:border-yellow-500/20 text-[11px] font-mono text-yellow-500 hover:text-white transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
                 >
-                  <Award className="w-3.5 h-3.5 text-blue-400" />
+                  <Award className="w-3.5 h-3.5 text-yellow-500" />
                   View Credentials & Bio
                 </button>
 
@@ -527,16 +527,16 @@ export default function TeamSection() {
                   <h4 className="font-display font-bold text-2xl text-white truncate">
                     {selectedMember.name}
                   </h4>
-                  <p className="text-xs text-blue-400 font-mono font-medium mt-1 uppercase tracking-wider">{selectedMember.role}</p>
+                  <p className="text-xs text-yellow-500 font-mono font-medium mt-1 uppercase tracking-wider">{selectedMember.role}</p>
                   
                   {selectedMember.location && (
                     <div className="flex items-center justify-center sm:justify-start gap-1 text-[11px] font-mono text-gray-500 mt-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-blue-400 flex-shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0" />
                       <span>{selectedMember.location}</span>
                     </div>
                   )}
                   {selectedMember.projectsCompleted && (
-                    <div className="inline-block mt-3 px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-mono text-blue-300">
+                    <div className="inline-block mt-3 px-2.5 py-0.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-[10px] font-mono text-yellow-400">
                       ✨ {selectedMember.projectsCompleted}
                     </div>
                   )}
@@ -553,8 +553,8 @@ export default function TeamSection() {
                 </div>
 
                 {selectedMember.workStyle && (
-                  <div className="p-3.5 rounded-xl bg-blue-500/5 border border-blue-500/10">
-                    <h5 className="text-[10px] uppercase font-mono text-blue-400 tracking-wider mb-1 font-semibold">Client Collaboration Style:</h5>
+                  <div className="p-3.5 rounded-xl bg-yellow-500/5 border border-yellow-500/10">
+                    <h5 className="text-[10px] uppercase font-mono text-yellow-500 tracking-wider mb-1 font-semibold">Client Collaboration Style:</h5>
                     <p className="text-gray-400 text-xs italic font-light">
                       "{selectedMember.workStyle}"
                     </p>
@@ -569,12 +569,12 @@ export default function TeamSection() {
                   <div className="space-y-4 relative pl-4 border-l border-white/5">
                     {selectedMember.detailedExperience.map((exp: any, i: number) => (
                       <div key={i} className="relative group/time">
-                        <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500 group-hover/time:bg-blue-400 transition-colors border-2 border-[#09090b]" />
+                        <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-yellow-500 group-hover/time:bg-yellow-400 transition-colors border-2 border-[#09090b]" />
                         <div className="flex items-baseline justify-between gap-2 flex-wrap">
-                          <h6 className="text-[12px] font-mono font-bold text-white group-hover/time:text-blue-300 transition-colors">{exp.title}</h6>
+                          <h6 className="text-[12px] font-mono font-bold text-white group-hover/time:text-yellow-400 transition-colors">{exp.title}</h6>
                           <span className="text-[9px] font-mono text-gray-500 bg-white/5 px-2 py-0.5 rounded">{exp.period}</span>
                         </div>
-                        <p className="text-[10px] font-mono text-blue-400 font-light mt-0.5">{exp.company}</p>
+                        <p className="text-[10px] font-mono text-yellow-500 font-light mt-0.5">{exp.company}</p>
                         <p className="text-gray-400 text-xs font-light leading-relaxed mt-1">{exp.description}</p>
                       </div>
                     ))}
@@ -588,12 +588,12 @@ export default function TeamSection() {
                   <div className="space-y-4 relative pl-4 border-l border-white/5">
                     {selectedMember.detailedEducation.map((edu: any, i: number) => (
                       <div key={i} className="relative group/time">
-                        <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-purple-500 group-hover/time:bg-purple-400 transition-colors border-2 border-[#09090b]" />
+                        <div className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-yellow-600 group-hover/time:bg-yellow-500 transition-colors border-2 border-[#09090b]" />
                         <div className="flex items-baseline justify-between gap-2 flex-wrap">
-                          <h6 className="text-[12px] font-mono font-bold text-white group-hover/time:text-purple-350 transition-colors">{edu.degree}</h6>
+                          <h6 className="text-[12px] font-mono font-bold text-white group-hover/time:text-yellow-500 transition-colors">{edu.degree}</h6>
                           <span className="text-[9px] font-mono text-gray-500 bg-white/5 px-2 py-0.5 rounded">{edu.period}</span>
                         </div>
-                        <p className="text-[10px] font-mono text-purple-400 font-light mt-0.5">{edu.institute}</p>
+                        <p className="text-[10px] font-mono text-yellow-600 font-light mt-0.5">{edu.institute}</p>
                         <p className="text-gray-400 text-xs font-light leading-relaxed mt-1">{edu.description}</p>
                       </div>
                     ))}
@@ -608,7 +608,7 @@ export default function TeamSection() {
                   <ul className="space-y-2 text-xs font-light text-gray-300">
                     {selectedMember.highlights.map((hlt: string, idx: number) => (
                       <li key={idx} className="flex gap-2 items-start">
-                        <CheckCircle className="w-3.5 h-3.5 text-blue-400 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-3.5 h-3.5 text-yellow-500 mt-0.5 flex-shrink-0" />
                         <span>{hlt}</span>
                       </li>
                     ))}
@@ -623,7 +623,7 @@ export default function TeamSection() {
                   <div className="space-y-3">
                     {selectedMember.detailedSkills.map((cat: any, i: number) => (
                       <div key={i} className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
-                        <span className="text-[9px] uppercase font-mono text-blue-300 tracking-wider font-semibold block mb-2">{cat.category}:</span>
+                        <span className="text-[9px] uppercase font-mono text-yellow-500 tracking-wider font-semibold block mb-2">{cat.category}:</span>
                         <div className="flex flex-wrap gap-1.5">
                           {cat.list.map((sk: string, skIdx: number) => (
                             <span key={skIdx} className="px-2 py-0.5 rounded bg-white/5 text-[10px] font-mono text-gray-400 font-light">

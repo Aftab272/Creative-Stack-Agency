@@ -19,12 +19,12 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-blue-300 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-yellow-500 font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-500" />
             INVESTMENT TIERS
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-4">
-            Transparent Pricing. Absolute Value<span className="text-blue-500">.</span>
+            Transparent Pricing. Absolute Value<span className="text-yellow-500">.</span>
           </h2>
           <p className="text-gray-400 text-sm font-light leading-relaxed">
             Choose a development pipeline that fits your operational roadmap. All client tiers receive custom hand-coded codebases, direct developer links, sandboxed testing environments, and search optimization.
@@ -36,7 +36,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
               onClick={() => setBillingCycle("monthly")}
               className={`px-5 py-2 rounded-lg text-xs font-medium uppercase tracking-widest transition-all cursor-pointer ${
                 billingCycle === "monthly"
-                  ? "bg-blue-600 text-white font-bold shadow-md"
+                  ? "bg-yellow-500 text-black font-bold shadow-md"
                   : "text-gray-400 hover:text-white"
               }`}
             >
@@ -46,7 +46,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
               onClick={() => setBillingCycle("yearly")}
               className={`px-5 py-2 rounded-lg text-xs font-medium uppercase tracking-widest transition-all relative cursor-pointer ${
                 billingCycle === "yearly"
-                  ? "bg-blue-600 text-white font-bold shadow-md"
+                  ? "bg-yellow-500 text-black font-bold shadow-md"
                   : "text-gray-400 hover:text-white"
               }`}
             >
@@ -76,13 +76,13 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
                 key={plan.id}
                 className={`group relative rounded-2xl flex flex-col justify-between transition-all duration-300 p-8 ${
                   isGrowth
-                    ? "bg-[#0b0b0bed] border-2 border-blue-500/40 shadow-[0_20px_50px_rgba(59,130,246,0.15)] ring-1 ring-blue-500/10 -translate-y-2 lg:-translate-y-4"
+                    ? "bg-[#0b0b0bed] border-2 border-yellow-500/40 shadow-[0_20px_50px_rgba(234,179,8,0.15)] ring-1 ring-yellow-500/10 -translate-y-2 lg:-translate-y-4"
                     : "bg-[#0B0B0B] border border-white/10 hover:border-white/20 shadow-xl"
                 }`}
               >
                 {/* Floating Best Choice badge if Growth */}
                 {isGrowth && (
-                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-blue-600 text-white font-mono text-[9px] tracking-widest uppercase font-black shadow-lg">
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-yellow-500 text-black font-mono text-[9px] tracking-widest uppercase font-black shadow-lg">
                     {plan.badge}
                   </span>
                 )}
@@ -91,7 +91,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
                   
                   {/* Package Meta Header */}
                   <div className="pb-6 mb-6 border-b border-white/5">
-                    <span className="font-mono text-[9px] uppercase tracking-widest text-[#3b82f6] font-bold block mb-1">
+                    <span className="font-mono text-[9px] uppercase tracking-widest text-yellow-500 font-bold block mb-1">
                       {plan.name}
                     </span>
                     
@@ -112,7 +112,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
 
                   {/* Delivery Timeline segment */}
                   <div className="flex items-center gap-2 mb-6 p-2 rounded-lg bg-white/[0.02] border border-white/5 text-[10px] font-mono">
-                    <Clock className="w-3.5 h-3.5 text-blue-400" />
+                    <Clock className="w-3.5 h-3.5 text-yellow-500" />
                     <span className="text-gray-400 lowercase">{plan.timeline}</span>
                   </div>
 
@@ -122,7 +122,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
                     <ul className="space-y-2.5">
                       {plan.features.map((feat, index) => (
                         <li key={index} className="flex items-start gap-2 text-[11px] text-gray-300 font-light leading-snug">
-                          <Check className="w-3.5 h-3.5 text-blue-400 flex-shrink-0 mt-0.5" />
+                          <Check className="w-3.5 h-3.5 text-yellow-500 flex-shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -136,7 +136,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
                   onClick={() => onPlanSelect(plan.id, budgetStr)}
                   className={`w-full py-4 text-center rounded-xl font-display font-semibold text-xs tracking-wider uppercase transition-all cursor-pointer ${
                     isGrowth
-                      ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:shadow-[0_4px_20px_rgba(59,130,246,0.5)] text-white hover:scale-[1.01]"
+                      ? "bg-gradient-to-r from-yellow-500 to-yellow-400 hover:shadow-[0_4px_20px_rgba(234,179,8,0.5)] text-black hover:scale-[1.01]"
                       : "bg-[#0f0f0f] border border-white/10 hover:bg-white hover:text-black text-gray-300"
                   }`}
                 >
@@ -150,7 +150,7 @@ export default function PricingSection({ onPlanSelect }: PricingSectionProps) {
 
         {/* Guarantees Tag notice */}
         <div className="mt-12 text-center flex items-center justify-center gap-2 max-w-xl mx-auto p-4 rounded-xl border border-white/5 bg-white/[0.01]">
-          <AlertCircle className="w-4 h-4 text-blue-400" />
+          <AlertCircle className="w-4 h-4 text-yellow-500" />
           <p className="text-[10px] sm:text-xs text-gray-400 font-mono">
             Every transaction is protected by signed SLAs, private staging links, and direct consulting lines.
           </p>
