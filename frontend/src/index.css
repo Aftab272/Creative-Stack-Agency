@@ -71,10 +71,20 @@ body {
   overflow-x: hidden;
   font-family: var(--font-sans);
   background-color: #ffffff;
+  /* Replaced fixed background to avoid GPU repainting glitches on Android */
+  position: relative;
+}
+
+/* Pseudo-element for fixed background gradient without layout thrashing */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
   background-image:
     radial-gradient(circle at 10% 20%, rgba(234, 179, 8, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(202, 138, 4, 0.05) 0%, transparent 40%);
-  background-attachment: fixed;
+  pointer-events: none;
 }
 
 /* Glassmorphism utility classes aligned with Sleek Theme */
@@ -121,16 +131,14 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(to right, #eab308, #ca8a04);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  border: 1px solid rgba(234, 179, 8, 0.5);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
 }
 .glow-border-hover:hover::before {
   opacity: 1;
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.2);
 }
 
 /* Custom Interactive Custom Cursor */

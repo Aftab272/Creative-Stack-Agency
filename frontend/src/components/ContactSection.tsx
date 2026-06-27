@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Sparkles, Mail, Clock, Calendar, Check, Send, PhoneCall, AlertCircle, X } from "lucide-react";
+import { Sparkles, Mail, Clock, Calendar, Check, Send, PhoneCall, AlertCircle, X, ArrowRight } from "lucide-react";
 import { postToBackend } from "../lib/api";
 
 interface ContactSectionProps {
