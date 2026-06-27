@@ -354,14 +354,14 @@ export default function TestimonialsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-blue-300 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full mb-4 font-mono text-[10px] uppercase text-blue-700 font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
             REVIEWS & STORIES
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-4 animate-float">
-            What Elite Brands Say About Us<span className="text-blue-500">.</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight mb-4 animate-float">
+            What Elite Brands Say About Us
           </h2>
-          <p className="text-gray-400 text-sm font-light leading-relaxed">
+          <p className="text-gray-600 text-sm font-normal leading-relaxed">
             Leading agencies do not hide behind vague promises. Explore our direct corporate client testimonials, and watch our live active social channels reels and status feeds.
           </p>
         </div>
@@ -373,16 +373,16 @@ export default function TestimonialsSection() {
           <div className="lg:col-span-7 space-y-6">
             
             {isFormOpen ? (
-              <div className="relative rounded-2xl bg-slate-900/40 border border-blue-500/30 p-8 shadow-2xl backdrop-blur-sm animate-fade-in">
-                <div className="absolute top-6 right-6 font-mono text-[9px] text-blue-400 font-bold bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/20">
+              <div className="relative rounded-2xl bg-white border border-gray-100 p-8 shadow-xl backdrop-blur-sm animate-fade-in">
+                <div className="absolute top-6 right-6 font-mono text-[9px] text-blue-700 font-bold bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">
                   NEW REVIEW
                 </div>
                 
-                <h3 className="font-display font-bold text-lg text-white mb-1 flex items-center gap-2">
+                <h3 className="font-display font-bold text-lg text-gray-900 mb-1 flex items-center gap-2">
                   <span>Elite Experience Submission</span>
-                  <Award className="w-4 h-4 text-yellow-400" />
+                  <Award className="w-4 h-4 text-yellow-500" />
                 </h3>
-                <p className="text-gray-400 text-xs font-light mb-6">
+                <p className="text-gray-600 text-xs font-normal mb-6">
                   Share your high-status milestone outcome working with Creative Stack Agency.
                 </p>
 
@@ -399,28 +399,28 @@ export default function TestimonialsSection() {
                     {/* Two column inputs */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold">Your Name</label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold">Your Name</label>
                         <input
                           type="text"
                           value={newClientName}
                           onChange={(e) => setNewClientName(e.target.value)}
                           placeholder="e.g. Aftab Akram"
-                          className={`bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-blue-500/50 focus:outline-none transition-colors ${
-                            errors.clientName ? "border-red-500" : "border-white/10"
+                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors ${
+                            errors.clientName ? "border-red-500" : "border-gray-200"
                           }`}
                         />
                         {errors.clientName && <span className="text-[9px] text-red-500 font-mono">{errors.clientName}</span>}
                       </div>
 
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold">Your Role & Title</label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold">Your Role & Title</label>
                         <input
                           type="text"
                           value={newRole}
                           onChange={(e) => setNewRole(e.target.value)}
                           placeholder="e.g. Founder & CEO"
-                          className={`bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-blue-500/50 focus:outline-none transition-colors ${
-                            errors.role ? "border-red-500" : "border-white/10"
+                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors ${
+                            errors.role ? "border-red-500" : "border-gray-200"
                           }`}
                         />
                         {errors.role && <span className="text-[9px] text-red-500 font-mono">{errors.role}</span>}
@@ -429,21 +429,21 @@ export default function TestimonialsSection() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex flex-col gap-1.5">
-                        <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold">Company / Brand Name</label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold">Company / Brand Name</label>
                         <input
                           type="text"
                           value={newCompanyName}
                           onChange={(e) => setNewCompanyName(e.target.value)}
                           placeholder="e.g. Creative Stack Agency"
-                          className={`bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-blue-500/50 focus:outline-none transition-colors ${
-                            errors.companyName ? "border-red-500" : "border-white/10"
+                          className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors ${
+                            errors.companyName ? "border-red-500" : "border-gray-200"
                           }`}
                         />
                         {errors.companyName && <span className="text-[9px] text-red-500 font-mono">{errors.companyName}</span>}
                       </div>
 
                       <div className="flex flex-col gap-1.5 justify-center">
-                        <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold mb-1">Elite Star Rating</label>
+                        <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold mb-1">Elite Star Rating</label>
                         <div className="flex items-center gap-1">
                           {[1, 2, 3, 4, 5].map((star) => (
                             <button
@@ -457,8 +457,8 @@ export default function TestimonialsSection() {
                               <Star
                                 className={`w-5 h-5 ${
                                   star <= (hoverRating || newRating)
-                                    ? "fill-yellow-500 text-yellow-400 drop-shadow-[0_0_8px_rgba(234,179,8,0.4)]"
-                                    : "text-gray-600"
+                                    ? "fill-yellow-500 text-yellow-500"
+                                    : "text-gray-300"
                                 }`}
                               />
                             </button>
@@ -468,14 +468,14 @@ export default function TestimonialsSection() {
                     </div>
 
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold">Your Review & Feedback</label>
+                      <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold">Your Review & Feedback</label>
                       <textarea
                         value={newQuote}
                         onChange={(e) => setNewQuote(e.target.value)}
                         placeholder="Describe your design aesthetics, speed, conversion rates, or milestones delivered by our elite team..."
                         rows={3}
-                        className={`bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-blue-500/50 focus:outline-none transition-colors resize-none ${
-                          errors.quote ? "border-red-500" : "border-white/10"
+                        className={`bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-blue-500 focus:outline-none transition-colors resize-none ${
+                          errors.quote ? "border-red-500" : "border-gray-200"
                         }`}
                       />
                       {errors.quote && <span className="text-[9px] text-red-500 font-mono">{errors.quote}</span>}
@@ -485,7 +485,7 @@ export default function TestimonialsSection() {
                       <button
                         type="button"
                         onClick={() => setIsFormOpen(false)}
-                        className="px-4 py-2 rounded-xl text-xs font-mono border border-white/5 text-gray-400 hover:text-white transition-colors cursor-pointer"
+                        className="px-4 py-2 rounded-xl text-xs font-mono border border-gray-200 text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
                       >
                         CANCEL
                       </button>
@@ -501,34 +501,34 @@ export default function TestimonialsSection() {
                 )}
               </div>
             ) : (
-              <div className="relative rounded-2xl bg-agency-card border border-white/15 p-8 shadow-2xl animate-fade-in">
-                <Quote className="absolute top-6 right-6 w-16 h-16 text-white/[0.02] pointer-events-none" />
+              <div className="relative rounded-2xl bg-white border border-gray-100 p-8 shadow-xl animate-fade-in">
+                <Quote className="absolute top-6 right-6 w-16 h-16 text-gray-100 pointer-events-none" />
 
                 {/* Stars render */}
                 <div className="flex items-center gap-1 mb-6">
                   {[...Array(activeReview?.rating || 5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-400" />
+                    <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                   ))}
                 </div>
 
                 {/* Quote block */}
-                <blockquote className="text-white text-md sm:text-lg leading-relaxed font-light mb-8 italic">
+                <blockquote className="text-gray-900 text-md sm:text-lg leading-relaxed font-normal mb-8 italic">
                   "{activeReview.quote}"
                 </blockquote>
 
                 {/* Client info bar */}
-                <div className="flex items-center justify-between border-t border-white/5 pt-6">
+                <div className="flex items-center justify-between border-t border-gray-100 pt-6">
                   
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-600/10 border border-blue-400/20 flex items-center justify-center font-display font-bold text-blue-400 text-sm">
+                    <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center font-display font-bold text-blue-700 text-sm">
                       {activeReview.clientName.charAt(0)}
                     </div>
                     <div>
-                      <span className="block font-display font-bold text-white text-sm">
+                      <span className="block font-display font-bold text-gray-900 text-sm">
                         {activeReview.clientName}
                       </span>
-                      <span className="block text-[11px] text-gray-400 font-mono">
-                        {activeReview.role} at <span className="text-blue-400 font-medium">{activeReview.companyName}</span>
+                      <span className="block text-[11px] text-gray-600 font-mono">
+                        {activeReview.role} at <span className="text-blue-600 font-medium">{activeReview.companyName}</span>
                       </span>
                     </div>
                   </div>
@@ -558,8 +558,8 @@ export default function TestimonialsSection() {
                   }}
                   className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border cursor-pointer ${
                     activeReviewId === rev.id && !isFormOpen
-                      ? "bg-white/5 border-blue-500 text-blue-400 font-semibold"
-                      : "bg-transparent border-white/5 text-gray-500 hover:text-gray-300"
+                      ? "bg-blue-50 border-blue-200 text-blue-700 font-semibold"
+                      : "bg-white border-gray-100 text-gray-500 hover:text-gray-900"
                   }`}
                 >
                   {rev.companyName.toUpperCase()}
@@ -570,8 +570,8 @@ export default function TestimonialsSection() {
                 onClick={() => setIsFormOpen(!isFormOpen)}
                 className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-300 border cursor-pointer flex items-center gap-1.5 ${
                   isFormOpen
-                    ? "bg-blue-500 text-white border-blue-500 font-semibold shadow-[0_0_15px_rgba(59,130,246,0.3)] animate-pulse"
-                    : "bg-transparent border-[#0088cc]/30 text-blue-400 hover:border-blue-500 hover:text-blue-300 shadow-[0_0_10px_rgba(0,136,204,0.1)] hover:shadow-[0_0_15px_rgba(0,136,204,0.2)]"
+                    ? "bg-blue-600 text-white border-blue-600 font-semibold shadow-sm animate-pulse"
+                    : "bg-white border-blue-200 text-blue-600 hover:border-blue-400 hover:text-blue-700 shadow-sm"
                 }`}
               >
                 <span>{isFormOpen ? "VIEW REVIEWS" : "✍️ WRITE REVIEW"}</span>

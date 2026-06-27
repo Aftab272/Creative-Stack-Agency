@@ -205,12 +205,12 @@ export default function PortfolioSection() {
       {/* Interactive Case Study Detail Modal Block */}
       {activeCaseStudyProject && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md">
-          <div className="relative w-full max-w-3xl rounded-2xl bg-agency-bg border border-white/10 shadow-3xl overflow-y-auto max-h-[92vh] flex flex-col">
+          <div className="relative w-full max-w-3xl rounded-2xl bg-white border border-gray-100 shadow-2xl overflow-y-auto max-h-[92vh] flex flex-col">
             
             {/* Close trigger */}
             <button
               onClick={() => setActiveCaseStudyProject(null)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-black/50 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white transition-all cursor-pointer z-30 backdrop-blur-sm"
+              className="absolute top-4 right-4 p-2 rounded-full bg-black/50 hover:bg-gray-100 border border-white/10 text-white hover:text-gray-900 transition-all cursor-pointer z-30 backdrop-blur-sm"
             >
               <X className="w-4 h-4" />
             </button>
@@ -235,10 +235,10 @@ export default function PortfolioSection() {
                      </span>
                   )}
                 </div>
-                <h3 className="text-2xl md:text-4xl font-display font-bold text-white tracking-tight mb-2">
+                <h3 className="text-2xl md:text-4xl font-display font-bold text-white tracking-tight mb-2 drop-shadow-md">
                   {activeCaseStudyProject.title}
                 </h3>
-                <p className="text-gray-300 text-xs sm:text-sm max-w-xl font-light">
+                <p className="text-gray-200 text-xs sm:text-sm max-w-xl font-normal drop-shadow-md">
                     {activeCaseStudyProject.description}
                 </p>
               </div>
@@ -250,11 +250,11 @@ export default function PortfolioSection() {
               {/* Highlight Metrics */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
                 {activeCaseStudyProject.results.map((res, index) => (
-                  <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/5 text-center flex flex-col justify-center">
-                    <span className="text-xl sm:text-2xl font-display font-black text-yellow-400 tracking-tight block">
+                  <div key={index} className="p-4 rounded-xl bg-gray-50 border border-gray-100 text-center flex flex-col justify-center shadow-sm">
+                    <span className="text-xl sm:text-2xl font-display font-black text-yellow-500 tracking-tight block">
                       {res.split(" ")[0]}
                     </span>
-                    <span className="text-xs text-gray-400 font-light mt-1.5 font-mono leading-tight px-2">
+                    <span className="text-xs text-gray-600 font-normal mt-1.5 font-mono leading-tight px-2">
                       {res.split(" ").slice(1).join(" ")}
                     </span>
                   </div>
@@ -262,24 +262,24 @@ export default function PortfolioSection() {
               </div>
 
               {/* Challenge vs Solution layout */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 border-b border-white/5 pb-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 border-b border-gray-100 pb-10">
 
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-yellow-400">
+                  <div className="flex items-center gap-2 text-yellow-500">
                     <Target className="w-5 h-5" />
-                    <h4 className="font-display font-semibold text-xs uppercase tracking-wider">THE CORE CHALLENGE:</h4>
+                    <h4 className="font-display font-semibold text-xs text-gray-900 uppercase tracking-wider">THE CORE CHALLENGE:</h4>
                   </div>
-                  <p className="text-gray-400 text-sm font-light leading-relaxed">
+                  <p className="text-gray-600 text-sm font-normal leading-relaxed">
                     {activeCaseStudyProject.challenge || "Our client required immediate, highly scalable system deployments to resolve mounting conversion bottlenecks and system processing speed constraints."}
                   </p>
                 </div>
 
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-yellow-300">
+                  <div className="flex items-center gap-2 text-yellow-500">
                     <CheckSquare className="w-5 h-5" />
-                    <h4 className="font-display font-semibold text-xs uppercase tracking-wider">ENGINEERED SOLUTION:</h4>
+                    <h4 className="font-display font-semibold text-xs text-gray-900 uppercase tracking-wider">ENGINEERED SOLUTION:</h4>
                   </div>
-                  <p className="text-gray-400 text-sm font-light leading-relaxed">
+                  <p className="text-gray-600 text-sm font-normal leading-relaxed">
                     {activeCaseStudyProject.solution || "We designed a streamlined technical platform utilizing modular cached components, CDN load balancers, and a premium UX strategy to optimize cart stickiness."}
                   </p>
                 </div>
@@ -288,12 +288,12 @@ export default function PortfolioSection() {
 
               {/* Technical Specifications */}
               <div className="mb-10">
-                <h4 className="font-display font-semibold text-xs text-white uppercase tracking-wider mb-4">
+                <h4 className="font-display font-semibold text-xs text-gray-900 uppercase tracking-wider mb-4">
                   DEPLOYED TECHNOLOGIES & CONSTRUCTS:
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {activeCaseStudyProject.tags.map((tag, idx) => (
-                    <span key={idx} className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-300 font-mono">
+                    <span key={idx} className="px-3 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-xs text-gray-700 font-mono">
                       {tag}
                     </span>
                   ))}
@@ -301,11 +301,11 @@ export default function PortfolioSection() {
               </div>
 
               {/* Detailed Narrative */}
-              <div className="mb-10 p-5 rounded-xl bg-[#0a0a0ade] border border-white/10">
-                <h4 className="font-display font-medium text-xs text-gray-400 uppercase tracking-widest mb-2">
+              <div className="mb-10 p-5 rounded-xl bg-gray-50 border border-gray-100 shadow-sm">
+                <h4 className="font-display font-semibold text-xs text-gray-500 uppercase tracking-widest mb-2">
                   STRATEGIC SUMMARY
                 </h4>
-                <p className="text-gray-300 text-sm leading-relaxed font-light">
+                <p className="text-gray-700 text-sm leading-relaxed font-normal">
                   {activeCaseStudyProject.caseStudy}
                 </p>
               </div>
@@ -317,7 +317,7 @@ export default function PortfolioSection() {
                     href={activeCaseStudyProject.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-4 text-center rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-display font-semibold text-sm transition-all cursor-pointer inline-flex items-center justify-center gap-2"
+                    className="flex-1 py-4 text-center rounded-xl bg-gray-100 hover:bg-gray-200 border border-gray-200 text-gray-900 font-display font-semibold text-sm transition-all cursor-pointer inline-flex items-center justify-center gap-2"
                   >
                     <Github className="w-4 h-4" />
                     Source Code

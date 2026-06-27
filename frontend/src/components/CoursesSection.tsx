@@ -527,22 +527,22 @@ export default function CoursesSection() {
             ELITE ONLINE SKILL ACADEMY
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight leading-none mb-4">
-            Master the Highest Status Stacks<span className="text-purple-500">.</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight leading-none mb-4">
+            Master the Highest Status Stacks
           </h2>
           
-          <p className="text-gray-400 text-xs sm:text-sm font-light leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-gray-600 text-xs sm:text-sm font-normal leading-relaxed max-w-2xl mx-auto mb-8">
             Take our custom curated algorithmic eligibility entrance test, unlock high-retention technical training modules, study under elite Pakistani agency stakeholders, and secure certified verification keys.
           </p>
 
           {/* Quick Realtime Academy Counters */}
-          <div className="grid grid-cols-3 max-w-lg mx-auto bg-slate-900/30 border border-white/5 divide-x divide-white/5 rounded-2xl py-4 backdrop-blur-sm shadow-xl">
+          <div className="grid grid-cols-3 max-w-lg mx-auto bg-white border border-gray-100 divide-x divide-gray-100 rounded-2xl py-4 shadow-sm">
             <div className="text-center">
-              <span className="block text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">480+</span>
+              <span className="block text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">480+</span>
               <span className="block text-[9px] font-mono uppercase tracking-wider text-gray-500 mt-1">Total Students</span>
             </div>
             <div className="text-center">
-              <span className="block text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">320+</span>
+              <span className="block text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">320+</span>
               <span className="block text-[9px] font-mono uppercase tracking-wider text-gray-500 mt-1">Passout Alumni</span>
             </div>
             <div className="text-center">
@@ -575,8 +575,8 @@ export default function CoursesSection() {
             }}
             className={`flex-1 py-2 px-3 text-xs font-mono font-medium rounded-xl border transition-all cursor-pointer text-center ${
               activeTab === "quiz"
-                ? "bg-blue-500/10 border-blue-500/40 text-blue-300 drop-shadow-[0_0_12px_rgba(59,130,246,0.15)]"
-                : "bg-transparent border-white/5 text-gray-400 hover:text-white"
+                ? "bg-blue-50 border-blue-200 text-blue-700 shadow-sm"
+                : "bg-white border-gray-100 text-gray-500 hover:text-gray-900"
             }`}
           >
             📋 Eligibility Quiz
@@ -586,8 +586,8 @@ export default function CoursesSection() {
             onClick={() => setActiveTab("records")}
             className={`flex-1 py-2 px-3 text-xs font-mono font-medium rounded-xl border transition-all cursor-pointer text-center relative ${
               activeTab === "records"
-                ? "bg-emerald-500/10 border-emerald-500/40 text-emerald-300"
-                : "bg-transparent border-white/5 text-gray-400 hover:text-white"
+                ? "bg-emerald-50 border-emerald-200 text-emerald-700 shadow-sm"
+                : "bg-white border-gray-100 text-gray-500 hover:text-gray-900"
             }`}
           >
             👤 Your Admissions
@@ -605,7 +605,7 @@ export default function CoursesSection() {
             {COURSES_DATA.map((course) => (
               <div 
                 key={course.id}
-                className="relative rounded-2xl bg-agency-card border border-white/5 p-6 sm:p-8 flex flex-col justify-between hover:border-purple-500/20 transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
+                className="relative rounded-2xl bg-white border border-gray-100 p-6 sm:p-8 flex flex-col justify-between hover:border-purple-500/20 transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
               >
                 <div className="absolute top-4 right-4 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-purple-500/15 text-[8px] font-mono tracking-widest text-purple-400 uppercase font-bold">
                   {course.badge}
@@ -627,38 +627,38 @@ export default function CoursesSection() {
                     </div>
                   </div>
 
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-white tracking-tight leading-tight group-hover:text-purple-300 transition-colors">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 tracking-tight leading-tight group-hover:text-purple-600 transition-colors">
                     {course.title}
                   </h3>
 
                   {/* Mentor Block Information details */}
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-gray-400 mt-3 font-mono border-b border-white/5 pb-4 mb-4">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-gray-600 mt-3 font-mono border-b border-gray-100 pb-4 mb-4">
                     <span className="flex items-center gap-1">
-                      <GraduationCap className="w-3.5 h-3.5 text-purple-400" />
-                      Mentor: <strong className="text-white font-medium">{course.mentor}</strong>
+                      <GraduationCap className="w-3.5 h-3.5 text-purple-500" />
+                      Mentor: <strong className="text-gray-900 font-medium">{course.mentor}</strong>
                     </span>
-                    <span className="hidden sm:inline text-gray-600">|</span>
+                    <span className="hidden sm:inline text-gray-300">|</span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-blue-400" />
-                      Timings: <strong className="text-white font-medium">{course.timings}</strong>
+                      <Clock className="w-3.5 h-3.5 text-blue-500" />
+                      Timings: <strong className="text-gray-900 font-medium">{course.timings}</strong>
                     </span>
                   </div>
 
-                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-light mb-6">
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal mb-6">
                     {course.description}
                   </p>
 
                   {/* REAL-TIME STUDENT ATTENDANCE TELEMETRY */}
-                  <div className="my-6 p-4 rounded-xl bg-slate-950/70 border border-white/5 flex flex-col gap-2.5 relative overflow-hidden">
+                  <div className="my-6 p-4 rounded-xl bg-gray-50 border border-gray-100 flex flex-col gap-2.5 relative overflow-hidden shadow-sm">
                     <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
                     
                     <div className="flex items-center justify-between text-xs font-mono">
-                      <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
+                      <div className="flex items-center gap-1.5 text-emerald-600 font-bold">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                         <span>LIVE SESSION</span>
                       </div>
-                      <div className="text-gray-300">
-                        <span className="text-emerald-400 font-extrabold text-sm">{liveStudentCounts[course.id] || 32} Students</span> taking class now
+                      <div className="text-gray-600">
+                        <span className="text-emerald-600 font-extrabold text-sm">{liveStudentCounts[course.id] || 32} Students</span> taking class now
                       </div>
                     </div>
 
@@ -680,7 +680,7 @@ export default function CoursesSection() {
                     <span className="text-[10px] uppercase font-mono text-gray-500 tracking-wider block font-semibold">Technical mastery skills delivered:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {course.skills.map((skill, sIdx) => (
-                        <span key={sIdx} className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-[10px] font-mono text-gray-300 font-light">
+                        <span key={sIdx} className="px-2.5 py-1 rounded-lg bg-gray-100 border border-gray-200 text-[10px] font-mono text-gray-700 font-medium">
                           {skill}
                         </span>
                       ))}
@@ -688,10 +688,10 @@ export default function CoursesSection() {
                   </div>
                 </div>
 
-                <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="text-left w-full sm:w-auto">
                     <span className="block text-[9px] font-mono text-gray-500 uppercase">Interactive Course Fee</span>
-                    <span className="text-lg font-mono font-bold text-emerald-400">{course.price}</span>
+                    <span className="text-lg font-mono font-bold text-emerald-600">{course.price}</span>
                   </div>
 
                   <button
@@ -708,7 +708,7 @@ export default function CoursesSection() {
         )}
 
         {activeTab === "quiz" && (
-          <div className="max-w-2xl mx-auto rounded-3xl bg-agency-card border border-blue-500/20 shadow-2xl p-6 sm:p-10 backdrop-blur-md animate-fade-in relative overflow-hidden">
+          <div className="max-w-2xl mx-auto rounded-3xl bg-white border border-gray-100 shadow-xl p-6 sm:p-10 backdrop-blur-md animate-fade-in relative overflow-hidden">
             
             {/* Visual Header bar indicator */}
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
@@ -720,23 +720,23 @@ export default function CoursesSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="font-display font-bold text-2xl text-white">Academy Entrance Eligibility Test</h3>
-                  <p className="text-gray-400 text-xs max-w-md mx-auto font-light leading-relaxed">
+                  <h3 className="font-display font-bold text-2xl text-gray-900">Academy Entrance Eligibility Test</h3>
+                  <p className="text-gray-600 text-xs max-w-md mx-auto font-normal leading-relaxed">
                     This test evaluates your alignment with high-performance technology frameworks. Scoring points satisfies admission standards.
                   </p>
                 </div>
 
-                <div className="p-4 bg-slate-950/70 border border-white/5 rounded-xl text-left max-w-sm mx-auto space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-mono text-gray-300">
-                    <Check className="w-3.5 h-3.5 text-blue-400" />
+                <div className="p-4 bg-gray-50 border border-gray-100 rounded-xl text-left max-w-sm mx-auto space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-mono text-gray-700">
+                    <Check className="w-3.5 h-3.5 text-blue-500" />
                     <span>Total of 15 questions</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs font-mono text-gray-300">
-                    <Check className="w-3.5 h-3.5 text-blue-400" />
+                  <div className="flex items-center gap-2 text-xs font-mono text-gray-700">
+                    <Check className="w-3.5 h-3.5 text-blue-500" />
                     <span>30 Marks Core Evaluation Metrics</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs font-mono text-gray-300">
-                    <Check className="w-3.5 h-3.5 text-blue-400" />
+                  <div className="flex items-center gap-2 text-xs font-mono text-gray-700">
+                    <Check className="w-3.5 h-3.5 text-blue-500" />
                     <span>Covers CS, AI, GK & Creative Stack</span>
                   </div>
                 </div>
@@ -746,7 +746,7 @@ export default function CoursesSection() {
                   <select
                     value={selectedCourse}
                     onChange={(e) => setSelectedCourse(e.target.value)}
-                    className="bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-xs text-slate-300 focus:outline-none"
+                    className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-xs text-gray-900 focus:outline-none"
                   >
                     {COURSES_DATA.map((c) => (
                       <option key={c.id} value={c.id}>{c.title}</option>
@@ -771,10 +771,10 @@ export default function CoursesSection() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="font-display font-bold text-2xl text-white">
+                  <h3 className="font-display font-bold text-2xl text-gray-900">
                     {quizScore && quizScore >= 16 ? "🎯 High Score Achieved!" : "📈 Score Verified!"}
                   </h3>
-                  <p className="text-gray-400 text-xs font-light max-w-md mx-auto">
+                  <p className="text-gray-600 text-xs font-normal max-w-md mx-auto">
                     Your entrance score results have been linked directly to our core registration servers. Loading your admissions verification form...
                   </p>
                 </div>
@@ -805,7 +805,7 @@ export default function CoursesSection() {
                 </div>
 
                 {/* Progress bar visual metrics */}
-                <div className="w-full bg-slate-950 rounded-full h-1 mb-8 overflow-hidden">
+                <div className="w-full bg-gray-100 rounded-full h-1 mb-8 overflow-hidden">
                   <div 
                     className="bg-blue-500 h-1 transition-all duration-300"
                     style={{ width: `${((currentQuestionIndex + 1) / 15) * 100}%` }}
@@ -813,7 +813,7 @@ export default function CoursesSection() {
                 </div>
 
                 {/* Question block */}
-                <h4 className="text-white font-display font-semibold text-lg leading-relaxed mb-6">
+                <h4 className="text-gray-900 font-display font-semibold text-lg leading-relaxed mb-6">
                   {QUIZ_QUESTIONS[currentQuestionIndex].question}
                 </h4>
 
@@ -825,8 +825,8 @@ export default function CoursesSection() {
                       onClick={() => handleSelectAnswer(idx)}
                       className={`w-full p-4 rounded-xl text-left text-xs font-mono border transition-all duration-200 cursor-pointer flex items-center justify-between ${
                         userAnswers[currentQuestionIndex] === idx
-                          ? "bg-blue-500/10 border-blue-500 text-blue-300"
-                          : "bg-slate-950/40 border-white/5 hover:border-white/15 text-gray-400 hover:text-gray-200"
+                          ? "bg-blue-50 border-blue-200 text-blue-700"
+                          : "bg-gray-50 border-gray-100 hover:border-gray-300 text-gray-700 hover:text-gray-900"
                       }`}
                     >
                       <span>{option}</span>
@@ -842,7 +842,7 @@ export default function CoursesSection() {
                   <button
                     disabled={currentQuestionIndex === 0}
                     onClick={handlePrevQuestion}
-                    className="px-4 py-2 border border-white/5 rounded-xl text-xs font-mono text-gray-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                    className="px-4 py-2 border border-gray-200 rounded-xl text-xs font-mono text-gray-600 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                   >
                     PREVIOUS
                   </button>
@@ -859,7 +859,7 @@ export default function CoursesSection() {
                     <button
                       disabled={userAnswers[currentQuestionIndex] === undefined}
                       onClick={handleNextQuestion}
-                      className="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-mono text-xs font-bold tracking-wider cursor-pointer flex items-center gap-1"
+                      className="px-5 py-2.5 rounded-xl bg-gray-100 hover:bg-gray-200 disabled:opacity-40 disabled:cursor-not-allowed text-gray-900 font-mono text-xs font-bold tracking-wider cursor-pointer flex items-center gap-1"
                     >
                       <span>NEXT</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -874,15 +874,15 @@ export default function CoursesSection() {
         )}
 
         {activeTab === "form" && (
-          <div className="max-w-4xl mx-auto rounded-3xl bg-agency-card border border-purple-500/20 p-6 sm:p-10 shadow-2xl backdrop-blur-md animate-fade-in relative">
+          <div className="max-w-4xl mx-auto rounded-3xl bg-white border border-gray-100 p-6 sm:p-10 shadow-xl backdrop-blur-md animate-fade-in relative">
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-purple-500 to-indigo-500" />
 
-            <div className="flex items-center justify-between border-b border-white/5 pb-4 mb-8">
+            <div className="flex items-center justify-between border-b border-gray-100 pb-4 mb-8">
               <div>
-                <span className="px-2.5 py-1 rounded bg-purple-500/10 border border-purple-500/20 text-[9px] font-mono text-purple-400 uppercase tracking-wider font-semibold">
+                <span className="px-2.5 py-1 rounded bg-purple-50 border border-purple-200 text-[9px] font-mono text-purple-700 uppercase tracking-wider font-semibold">
                   ENTRY PROFILE SCORED: {quizScore ?? 0} MARKS
                 </span>
-                <h3 className="text-xl font-display font-extrabold text-white mt-1.5">Creative Stack Admission Registration</h3>
+                <h3 className="text-xl font-display font-extrabold text-gray-900 mt-1.5">Creative Stack Admission Registration</h3>
               </div>
               
               <div className="hidden sm:block text-right">
@@ -896,11 +896,11 @@ export default function CoursesSection() {
                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mx-auto animate-bounce">
                   <CheckCircle className="w-8 h-8 stroke-[2.5]" />
                 </div>
-                <h4 className="text-2xl font-display font-bold text-emerald-400">Student Registered Successfully!</h4>
-                <p className="text-gray-300 text-xs font-light max-w-sm mx-auto">
+                <h4 className="text-2xl font-display font-bold text-emerald-600">Student Registered Successfully!</h4>
+                <p className="text-gray-600 text-xs font-normal max-w-sm mx-auto">
                   Your official candidate slot has been recorded with identification number:
                 </p>
-                <div className="px-4 py-2.5 bg-slate-950 border border-emerald-500/20 text-emerald-400 font-mono text-sm max-w-xs mx-auto rounded-xl font-bold tracking-widest shadow-md">
+                <div className="px-4 py-2.5 bg-gray-50 border border-emerald-200 text-emerald-700 font-mono text-sm max-w-xs mx-auto rounded-xl font-bold tracking-widest shadow-sm">
                   {newStudentId}
                 </div>
                 <p className="text-gray-500 text-[10px] font-mono pt-4">Linking details. Loading dashboard list...</p>
@@ -921,8 +921,8 @@ export default function CoursesSection() {
                         value={fullname}
                         onChange={(e) => setFullname(e.target.value)}
                         placeholder="e.g. M. Sami Ullah"
-                        className={`w-full bg-slate-950/80 border rounded-xl pl-10 pr-4 py-2.5 text-xs text-gray-200 focus:border-purple-500/50 focus:outline-none transition-colors ${
-                          formErrors.fullname ? "border-red-500" : "border-white/10"
+                        className={`w-full bg-gray-50 border rounded-xl pl-10 pr-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-colors ${
+                          formErrors.fullname ? "border-red-500" : "border-gray-200"
                         }`}
                       />
                     </div>
@@ -939,8 +939,8 @@ export default function CoursesSection() {
                         value={fatherName}
                         onChange={(e) => setFatherName(e.target.value)}
                         placeholder="e.g. M. Fiaz Ahmed"
-                        className={`w-full bg-slate-950/80 border rounded-xl pl-10 pr-4 py-2.5 text-xs text-gray-200 focus:border-purple-500/50 focus:outline-none transition-colors ${
-                          formErrors.fatherName ? "border-red-500" : "border-white/10"
+                        className={`w-full bg-gray-50 border rounded-xl pl-10 pr-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-colors ${
+                          formErrors.fatherName ? "border-red-500" : "border-gray-200"
                         }`}
                       />
                     </div>
@@ -959,8 +959,8 @@ export default function CoursesSection() {
                       value={education}
                       onChange={(e) => setEducation(e.target.value)}
                       placeholder="e.g. BSCS, BSSE, Intermediate"
-                      className={`w-full bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-purple-500/50 focus:outline-none transition-colors ${
-                        formErrors.education ? "border-red-500" : "border-white/10"
+                      className={`w-full bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-colors ${
+                        formErrors.education ? "border-red-500" : "border-gray-200"
                       }`}
                     />
                     {formErrors.education && <span className="text-[9px] text-red-500 font-mono">{formErrors.education}</span>}
@@ -974,8 +974,8 @@ export default function CoursesSection() {
                       value={field}
                       onChange={(e) => setField(e.target.value)}
                       placeholder="e.g. Computer Science, engineering"
-                      className={`w-full bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-purple-500/50 focus:outline-none transition-colors ${
-                        formErrors.field ? "border-red-500" : "border-white/10"
+                      className={`w-full bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-colors ${
+                        formErrors.field ? "border-red-500" : "border-gray-200"
                       }`}
                     />
                     {formErrors.field && <span className="text-[9px] text-red-500 font-mono">{formErrors.field}</span>}
@@ -989,8 +989,8 @@ export default function CoursesSection() {
                       value={instituteName}
                       onChange={(e) => setInstituteName(e.target.value)}
                       placeholder="e.g. COMSATS, KIPS Okara"
-                      className={`w-full bg-slate-950/80 border rounded-xl px-4 py-2.5 text-xs text-gray-200 focus:border-purple-500/50 focus:outline-none transition-colors ${
-                        formErrors.instituteName ? "border-red-500" : "border-white/10"
+                      className={`w-full bg-gray-50 border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-colors ${
+                        formErrors.instituteName ? "border-red-500" : "border-gray-200"
                       }`}
                     />
                     {formErrors.instituteName && <span className="text-[9px] text-red-500 font-mono">{formErrors.instituteName}</span>}
@@ -1006,7 +1006,7 @@ export default function CoursesSection() {
                     <select
                       value={selectedCourse}
                       onChange={(e) => setSelectedCourse(e.target.value)}
-                      className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-gray-300 focus:border-purple-500/50 focus:outline-none"
+                      className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none"
                     >
                       {COURSES_DATA.map((c) => (
                         <option key={c.id} value={c.id}>{c.title}</option>
@@ -1030,8 +1030,8 @@ export default function CoursesSection() {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="e.g. +92 302 7434569"
-                        className={`w-full bg-slate-950/80 border rounded-xl pl-10 pr-4 py-2.5 text-xs text-gray-200 focus:border-purple-500/50 focus:outline-none transition-colors ${
-                          formErrors.phone ? "border-red-500" : "border-white/10"
+                        className={`w-full bg-gray-50 border rounded-xl pl-10 pr-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-colors ${
+                          formErrors.phone ? "border-red-500" : "border-gray-200"
                         }`}
                       />
                     </div>
@@ -1078,41 +1078,41 @@ export default function CoursesSection() {
                 </div>
 
                 {/* Corporate billing fee deposit block */}
-                <div className="rounded-2xl bg-gradient-to-tr from-slate-950 to-indigo-950/40 border border-blue-500/15 p-6 space-y-4">
-                  <div className="flex items-center gap-2 font-mono text-xs uppercase text-blue-400 font-semibold">
-                    <Wallet className="w-4 h-4 text-blue-400" />
+                <div className="rounded-2xl bg-gray-50 border border-gray-100 p-6 space-y-4 shadow-sm">
+                  <div className="flex items-center gap-2 font-mono text-xs uppercase text-blue-600 font-semibold">
+                    <Wallet className="w-4 h-4 text-blue-600" />
                     <span>Secure Online Admission Fee Deposit & Address Verification</span>
                   </div>
 
-                  <p className="text-gray-300 text-[11px] leading-relaxed font-light">
+                  <p className="text-gray-600 text-[11px] leading-relaxed font-normal">
                     Deposit corresponding admission fees to our direct official accounts. Transfer parameters under the verification address (Transaction ID) should be typed below:
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div className="p-3 bg-slate-900 border border-white/5 rounded-xl font-mono text-center">
+                    <div className="p-3 bg-white border border-gray-100 rounded-xl font-mono text-center shadow-sm">
                       <span className="block text-[8px] text-gray-500 uppercase font-semibold">🍊 JazzCash Account</span>
-                      <span className="block text-[11px] text-white font-bold mt-1">0302 7434569</span>
-                      <span className="block text-[8px] text-gray-400 mt-0.5">Title: Creative Stack</span>
+                      <span className="block text-[11px] text-gray-900 font-bold mt-1">0302 7434569</span>
+                      <span className="block text-[8px] text-gray-500 mt-0.5">Title: Creative Stack</span>
                     </div>
-                    <div className="p-3 bg-slate-900 border border-white/5 rounded-xl font-mono text-center">
+                    <div className="p-3 bg-white border border-gray-100 rounded-xl font-mono text-center shadow-sm">
                       <span className="block text-[8px] text-gray-500 uppercase font-semibold">🟢 EasyPaisa Account</span>
-                      <span className="block text-[11px] text-white font-bold mt-1">0302 7434569</span>
-                      <span className="block text-[8px] text-gray-400 mt-0.5">Title: Creative Stack</span>
+                      <span className="block text-[11px] text-gray-900 font-bold mt-1">0302 7434569</span>
+                      <span className="block text-[8px] text-gray-500 mt-0.5">Title: Creative Stack</span>
                     </div>
-                    <div className="p-3 bg-slate-900 border border-white/5 rounded-xl font-mono text-center">
+                    <div className="p-3 bg-white border border-gray-100 rounded-xl font-mono text-center shadow-sm">
                       <span className="block text-[8px] text-gray-500 uppercase font-semibold">🏦 Direct Bank Transfer</span>
-                      <span className="block text-[10px] text-white font-bold mt-1">UBL / HBL / ABL / MCB</span>
-                      <span className="block text-[8px] text-gray-400 mt-0.5">Query over WhatsApp</span>
+                      <span className="block text-[10px] text-gray-900 font-bold mt-1">UBL / HBL / ABL / MCB</span>
+                      <span className="block text-[8px] text-gray-500 mt-0.5">Query over WhatsApp</span>
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold">Select Deposit Channel method</label>
+                      <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold">Select Deposit Channel method</label>
                       <select
                         value={paymentMethod}
                         onChange={(e) => setPaymentMethod(e.target.value)}
-                        className="bg-slate-950 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-gray-300 focus:outline-none"
+                        className="bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:outline-none"
                       >
                         <option value="JazzCash">🍊 JazzCash Wallet</option>
                         <option value="EasyPaisa">🟢 EasyPaisa App</option>
@@ -1125,14 +1125,14 @@ export default function CoursesSection() {
                     </div>
 
                     <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-mono text-gray-400 uppercase font-semibold">Transaction ID / Payment Verification Code</label>
+                      <label className="text-[10px] font-mono text-gray-500 uppercase font-semibold">Transaction ID / Payment Verification Code</label>
                       <input
                         type="text"
                         value={paymentAddress}
                         onChange={(e) => setPaymentAddress(e.target.value)}
                         placeholder="e.g. TRX-9824156-HSA"
-                        className={`bg-slate-950 border rounded-xl px-4 py-2.5 text-xs text-gray-300 focus:border-purple-500/50 focus:outline-none transition-all ${
-                          formErrors.paymentAddress ? "border-red-500" : "border-white/10"
+                        className={`bg-white border rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:border-purple-500 focus:outline-none transition-all ${
+                          formErrors.paymentAddress ? "border-red-500" : "border-gray-200"
                         }`}
                       />
                       {formErrors.paymentAddress && <span className="text-[9px] text-red-500 font-mono">{formErrors.paymentAddress}</span>}
@@ -1141,11 +1141,11 @@ export default function CoursesSection() {
 
                 </div>
 
-                <div className="flex items-center justify-between border-t border-white/5 pt-6">
+                <div className="flex items-center justify-between border-t border-gray-100 pt-6">
                   <button
                     type="button"
                     onClick={() => setActiveTab("quiz")}
-                    className="px-4 py-2 text-xs font-mono border border-white/5 rounded-xl text-gray-400 hover:text-white cursor-pointer"
+                    className="px-4 py-2 text-xs font-mono border border-gray-200 rounded-xl text-gray-600 hover:text-gray-900 cursor-pointer"
                   >
                     BACK TO TEST
                   </button>
@@ -1169,25 +1169,25 @@ export default function CoursesSection() {
           <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
             
             <div className="flex items-center justify-between">
-              <h3 className="font-display font-bold text-xl text-white">Your Academy Student Registry</h3>
+              <h3 className="font-display font-bold text-xl text-gray-900">Your Academy Student Registry</h3>
               <button
                 onClick={() => {
                   setSelectedCourse("mern-mastery");
                   setActiveTab("catalog");
                 }}
-                className="py-2 px-4 rounded-xl border border-purple-500/30 hover:border-purple-500 text-purple-400 text-xs font-mono font-medium hover:text-white transition-all cursor-pointer flex items-center gap-1.5"
+                className="py-2 px-4 rounded-xl border border-purple-200 hover:border-purple-500 text-purple-600 text-xs font-mono font-medium hover:text-purple-700 transition-all cursor-pointer flex items-center gap-1.5 bg-purple-50"
               >
                 <span>➕ ENROLL NEW COURSE</span>
               </button>
             </div>
 
             {myEnrollments.length === 0 ? (
-              <div className="text-center py-16 rounded-2xl bg-agency-card border border-white/5 space-y-4">
-                <div className="w-12 h-12 rounded-full bg-slate-900 border border-white/5 flex items-center justify-center text-gray-500 mx-auto">
+              <div className="text-center py-16 rounded-2xl bg-white border border-gray-100 shadow-xl space-y-4">
+                <div className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-500 mx-auto">
                   <BookOpen className="w-6 h-6" />
                 </div>
-                <h4 className="font-display font-bold text-md text-gray-300">No active course registrations matched</h4>
-                <p className="text-gray-500 text-xs font-light max-w-sm mx-auto">
+                <h4 className="font-display font-bold text-md text-gray-900">No active course registrations matched</h4>
+                <p className="text-gray-600 text-xs font-normal max-w-sm mx-auto">
                   Take the algorithmic entrance test, answer the CS/AI problems, and complete the registration fields to verify your slot.
                 </p>
                 <button
@@ -1202,54 +1202,54 @@ export default function CoursesSection() {
                 {myEnrollments.map((record) => (
                   <div 
                     key={record.id}
-                    className="relative rounded-2xl bg-slate-900/60 border border-emerald-500/20 p-6 shadow-xl space-y-4 overflow-hidden"
+                    className="relative rounded-2xl bg-white border border-gray-100 p-6 shadow-xl space-y-4 overflow-hidden"
                   >
                     {/* Status accent indicator badge tag */}
                     <div className="absolute top-4 right-4 flex items-center gap-1">
-                      <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                      <span className="text-[9px] font-mono font-bold text-amber-400 uppercase tracking-widest">{record.status}</span>
+                      <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                      <span className="text-[9px] font-mono font-bold text-amber-600 uppercase tracking-widest">{record.status}</span>
                     </div>
 
                     <div>
                       <span className="font-mono text-[9px] text-gray-500 uppercase block">Candidate Regist. ID</span>
-                      <span className="font-mono text-[11px] font-extrabold text-[#c084fc] tracking-wider">{record.id}</span>
+                      <span className="font-mono text-[11px] font-extrabold text-purple-600 tracking-wider">{record.id}</span>
                     </div>
 
-                    <h4 className="text-md font-display font-bold text-white tracking-tight leading-tight">
+                    <h4 className="text-md font-display font-bold text-gray-900 tracking-tight leading-tight">
                       {getCourseTitle(record.courseSelected)}
                     </h4>
 
                     {/* Quick values grid details */}
-                    <div className="grid grid-cols-2 gap-3 text-[11px] font-mono pt-2 border-t border-white/5">
+                    <div className="grid grid-cols-2 gap-3 text-[11px] font-mono pt-2 border-t border-gray-100">
                       <div>
                         <span className="text-gray-500 block">STUDENT</span>
-                        <span className="text-gray-300 block leading-tight font-medium">{record.studentName}</span>
+                        <span className="text-gray-900 block leading-tight font-medium">{record.studentName}</span>
                       </div>
                       <div>
                         <span className="text-gray-500 block">FATHER NAME</span>
-                        <span className="text-gray-300 block leading-tight font-medium">{record.fatherName}</span>
+                        <span className="text-gray-900 block leading-tight font-medium">{record.fatherName}</span>
                       </div>
                       <div>
                         <span className="text-gray-500 block">EDUCATION</span>
-                        <span className="text-gray-300 block leading-tight font-medium">{record.education} ({record.field})</span>
+                        <span className="text-gray-900 block leading-tight font-medium">{record.education} ({record.field})</span>
                       </div>
                       <div>
                         <span className="text-gray-500 block">PRESET TIME</span>
-                        <span className="text-zinc-300 block leading-tight font-medium">{record.classTime}</span>
+                        <span className="text-gray-900 block leading-tight font-medium">{record.classTime}</span>
                       </div>
                       <div>
                         <span className="text-gray-500 block">CHANNEL DEPOSIT</span>
-                        <span className="text-emerald-400 block font-bold uppercase tracking-wider">{record.paymentMethod}</span>
+                        <span className="text-emerald-600 block font-bold uppercase tracking-wider">{record.paymentMethod}</span>
                       </div>
                       <div>
                         <span className="text-gray-500 block">TEST MARKS SCORE</span>
-                        <span className="text-blue-400 block font-extrabold">{record.score} / 30 Marks</span>
+                        <span className="text-blue-600 block font-extrabold">{record.score} / 30 Marks</span>
                       </div>
                     </div>
 
-                    <div className="p-3 bg-slate-950 rounded-xl flex items-center justify-between text-[10px] font-mono text-gray-400">
+                    <div className="p-3 bg-gray-50 rounded-xl flex items-center justify-between text-[10px] font-mono text-gray-600">
                       <span>📆 Verified Date: {record.enrolledAt.split(",")[0]}</span>
-                      <span className="text-purple-400 font-bold uppercase">Candidate Logged</span>
+                      <span className="text-purple-600 font-bold uppercase">Candidate Logged</span>
                     </div>
 
                   </div>
