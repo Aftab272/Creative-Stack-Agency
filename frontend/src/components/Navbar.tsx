@@ -78,7 +78,7 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
   return (
     <nav
       id="main-nav"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`absolute top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "py-3 bg-black/90 backdrop-blur-md border-b border-white/5 shadow-xl"
           : "py-6 bg-black"
