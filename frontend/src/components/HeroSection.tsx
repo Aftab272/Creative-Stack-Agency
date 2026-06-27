@@ -106,57 +106,45 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
           animate="show"
         >
           
-          {/* Sparkle badge */}
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-6 animate-float">
-            <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
-            <span className="font-mono text-[10px] uppercase tracking-widest text-yellow-300 font-semibold">
-              The Standard of Creative Engineering
+          {/* Small Gold Heading */}
+          <motion.div variants={itemVariants} className="mb-4">
+            <span className="font-display font-semibold text-sm uppercase tracking-widest text-yellow-500">
+              WE BUILD DIGITAL SOLUTIONS
             </span>
           </motion.div>
 
           {/* Core display headline */}
-          <motion.h1 variants={itemVariants} className="font-display font-bold text-5xl sm:text-6xl md:text-7xl tracking-tighter text-white leading-none mb-6">
-            Build<span className="text-yellow-500">.</span> <br />
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent">
-              Design. Scale.
-            </span>
+          <motion.h1 variants={itemVariants} className="font-display font-bold text-5xl sm:text-6xl md:text-7xl tracking-tighter text-gray-900 leading-[1.1] mb-6">
+            We Build Digital <br />
+            Experiences
           </motion.h1>
 
-          <motion.p variants={itemVariants} className="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed mb-8 font-light">
-            We create websites, mobile apps, digital experiences, and growth systems that help brands move faster, scale globally, and look better.
+          <motion.p variants={itemVariants} className="text-gray-600 text-lg md:text-xl max-w-xl leading-relaxed mb-10 font-normal">
+            We are a creative digital agency providing web development, design and digital marketing services to help your business grow.
           </motion.p>
 
           {/* CTA Action Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-12 w-full sm:w-auto">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 mb-12 w-full sm:w-auto items-center">
             <button
-              onClick={onStartProjectClick}
-              className="interactive-hover group px-8 py-4 rounded-xl bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-display font-semibold tracking-wide hover:shadow-[0_10px_35px_-8px_rgba(234,179,8,0.6)] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
+              onClick={onViewPortfolioClick}
+              className="interactive-hover group px-8 py-4 rounded-md bg-yellow-500 text-black font-display font-semibold tracking-wide hover:bg-yellow-400 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-yellow-500/20"
             >
-              Start Project
+              EXPLORE SERVICES
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
             <button
-              onClick={onViewPortfolioClick}
-              className="interactive-hover group px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 font-display font-semibold tracking-wide active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
+              onClick={() => {}}
+              className="interactive-hover group px-6 py-4 rounded-md bg-transparent text-gray-900 font-display font-semibold tracking-wide hover:text-yellow-500 active:scale-95 transition-all duration-300 flex items-center justify-center gap-3"
             >
-              View Portfolio
+              <span className="flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 group-hover:border-yellow-500 text-yellow-500">
+                <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+              WATCH VIDEO
             </button>
           </motion.div>
 
-          {/* Stats Bar */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full pt-8 border-t border-white/10">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex flex-col">
-                <span className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
-                  {stat.value}
-                </span>
-                <span className="text-xs text-gray-500 uppercase tracking-widest mt-1 font-medium">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+          {/* Stats Bar Removed for design matching */}
 
         </motion.div>
 
@@ -173,187 +161,44 @@ export default function HeroSection({ onStartProjectClick, onViewPortfolioClick 
 
           {/* Interactive Core Glass Panel */}
           <motion.div 
-            whileHover={{ scale: 1.02, rotateY: 0, rotateX: 0, borderColor: "rgba(234,179,8,0.5)" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative w-full max-w-[440px] rounded-2xl glass-effect p-6 shadow-3xl border border-white/10"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+            className="lg:col-span-5 relative w-full flex justify-center group"
           >
-            
-            {/* Window Frame Controls */}
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/5">
-              <div className="flex items-center gap-1.5">
-                <span className="w-3 h-3 rounded-full bg-red-500/60" />
-                <span className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                <span className="w-3 h-3 rounded-full bg-green-500/60" />
-                <span className="font-mono text-[10px] text-gray-500 ml-2">creative-stack-agency-live.json</span>
+            {/* Laptop Mockup placeholder */}
+            <div className="relative w-full max-w-[500px] aspect-[16/10] bg-gray-800 rounded-t-xl rounded-b-sm shadow-2xl border-4 border-gray-900 flex flex-col overflow-hidden">
+              <div className="w-full h-4 bg-gray-900 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 rounded-full bg-gray-700"></div>
               </div>
-              <div className="flex items-center gap-1">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="font-mono text-[9px] text-green-400">CORE UPCAST</span>
+              <div className="flex-1 bg-[#111111] p-6 relative flex flex-col items-start justify-center">
+                <span className="text-yellow-500 font-bold text-xs mb-2">CreativeStack</span>
+                <h3 className="text-white font-bold text-2xl leading-tight mb-2">We Create<br/>Solutions That<br/><span className="text-yellow-500">Drive Success</span></h3>
+                <button className="px-3 py-1 bg-yellow-500 text-black text-[10px] font-bold rounded shadow-lg">GET STARTED</button>
+                
+                {/* Decorative wave */}
+                <svg className="absolute bottom-0 right-0 w-3/4 opacity-30" viewBox="0 0 200 100" fill="none">
+                  <path d="M0,100 C50,50 100,100 200,0 L200,100 Z" fill="url(#gold-wave)"/>
+                  <defs>
+                    <linearGradient id="gold-wave" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="#eab308" />
+                      <stop offset="100%" stopColor="#ca8a04" />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
             </div>
+            {/* Laptop Base */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-[110%] max-w-[560px] h-4 bg-gray-300 rounded-b-xl rounded-t-sm shadow-md border-b-2 border-gray-400 z-0"></div>
 
-            {/* Simulated Live Analytics Bar */}
-            <div className="grid grid-cols-3 gap-3 mb-6">
-              
-              <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                <span className="block text-[9px] uppercase font-mono text-gray-500 tracking-wider">VIRTUAL SEED</span>
-                <span className="block font-display font-bold text-md text-white mt-0.5">{activeUsers}</span>
-                <span className="block text-[8px] text-blue-400 mt-1 font-mono">Live Session Influx</span>
+            {/* Mobile Mockup */}
+            <div className="absolute -right-4 -bottom-8 w-24 h-48 bg-gray-900 rounded-2xl shadow-2xl border-4 border-gray-800 p-2 z-10 flex flex-col">
+              <div className="flex-1 bg-[#111111] rounded-xl relative flex flex-col items-center justify-center p-2 text-center overflow-hidden">
+                <h4 className="text-white font-bold text-[10px] leading-tight mb-2">We Create Solutions That Drive Success</h4>
+                <button className="px-2 py-0.5 bg-yellow-500 text-black text-[6px] font-bold rounded">GET STARTED</button>
               </div>
-
-              <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                <span className="block text-[9px] uppercase font-mono text-gray-500 tracking-wider">EDGE LATENCY</span>
-                <span className="block font-display font-bold text-md text-white mt-0.5">{latency}ms</span>
-                <span className="block text-[8px] text-emerald-400 mt-1 font-mono">Optimize Server</span>
-              </div>
-
-              <div className="p-3 rounded-xl bg-white/5 border border-white/5">
-                <span className="block text-[9px] uppercase font-mono text-gray-500 tracking-wider">SEC PROTOCOL</span>
-                <span className="block font-display font-bold text-md text-white mt-0.5">SHA-256</span>
-                <span className="block text-[8px] text-purple-400 mt-1 font-mono">Shield Active</span>
-              </div>
-
             </div>
-
-            {/* Chart Segment - Toggle Tabs */}
-            <div className="flex items-center gap-1 p-1 bg-white/5 rounded-lg border border-white/5 mb-4">
-              <button
-                onClick={() => setActiveTab("traffic")}
-                className={`flex-1 py-1 px-1.5 rounded text-[10px] font-mono text-center transition-all ${
-                  activeTab === "traffic" ? "bg-blue-600 text-white shadow-md font-semibold" : "text-gray-400 hover:text-white"
-                }`}
-              >
-                TRAFFIC INDEX
-              </button>
-              <button
-                onClick={() => setActiveTab("conversion")}
-                className={`flex-1 py-1 px-1.5 rounded text-[10px] font-mono text-center transition-all ${
-                  activeTab === "conversion" ? "bg-blue-600 text-white shadow-md font-semibold" : "text-gray-400 hover:text-white"
-                }`}
-              >
-                CONVERSION BOOST
-              </button>
-              <button
-                onClick={() => setActiveTab("speed")}
-                className={`flex-1 py-1 px-1.5 rounded text-[10px] font-mono text-center transition-all ${
-                  activeTab === "speed" ? "bg-blue-600 text-white shadow-md font-semibold" : "text-gray-400 hover:text-white"
-                }`}
-              >
-                CORE ENGINE
-              </button>
-            </div>
-
-            {/* Custom Interactive SVG Graph Panel */}
-            <div className="relative h-32 rounded-xl bg-black/40 border border-white/5 p-3 flex flex-col justify-end overflow-hidden mb-6">
-              
-              {activeTab === "traffic" && (
-                <>
-                  <div className="absolute top-2 left-2 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping" />
-                    <span className="text-[9px] font-mono text-gray-400">Total API requests: 1.4M (Quarterly)</span>
-                  </div>
-                  {/* Neon SVG Polyline Plot */}
-                  <svg className="w-full h-20" viewBox="0 0 100 40" preserveAspectRatio="none">
-                    <defs>
-                      <linearGradient id="chart-glow" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
-                        <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-                      </linearGradient>
-                    </defs>
-                    {/* Fill */}
-                    <path d="M0,40 L0,30 L15,22 L30,35 L50,15 L66,28 L84,5 L100,20 L100,40 Z" fill="url(#chart-glow)" />
-                    {/* Line */}
-                    <path d="M0,30 L15,22 L30,35 L50,15 L66,28 L84,5 L100,20" fill="none" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="84" cy="5" r="2" fill="#fff" className="animate-pulse" />
-                  </svg>
-                </>
-              )}
-
-              {activeTab === "conversion" && (
-                <>
-                  <div className="absolute top-2 left-2 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
-                    <span className="text-[9px] font-mono text-gray-400">Average Store Checkout rate: +14.6% Increase</span>
-                  </div>
-                  {/* Bar columns */}
-                  <div className="w-full h-20 flex items-end justify-between px-4 pb-2">
-                    <div className="w-4 bg-white/15 rounded-t h-4" />
-                    <div className="w-4 bg-white/15 rounded-t h-8" />
-                    <div className="w-4 bg-white/15 rounded-t h-12" />
-                    <div className="w-4 bg-blue-600/50 rounded-t h-14" />
-                    <div className="w-4 bg-blue-500 rounded-t h-[72px] relative">
-                      <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[8px] font-bold text-emerald-400">GOLD</span>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {activeTab === "speed" && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
-                  <p className="text-[10px] text-gray-400 font-mono mb-2">Evaluate current client compilation speeds:</p>
-                  
-                  {speedLoading ? (
-                    <div className="flex items-center gap-2">
-                      <Cpu className="w-4 h-4 text-blue-400 animate-spin" />
-                      <span className="text-[10px] font-mono text-blue-400">Interrogating asset weights...</span>
-                    </div>
-                  ) : speedScore !== null ? (
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full border-2 border-green-500 flex items-center justify-center font-display font-black text-green-400 text-xs shadow-[0_0_15px_rgba(34,197,94,0.3)] bg-green-500/10">
-                        {speedScore}
-                      </div>
-                      <div className="text-left">
-                        <span className="block text-[10px] font-mono text-green-400 font-semibold">Instant-Load Certified</span>
-                        <span className="block text-[8px] text-gray-500">Speed optimized with Vite Edge</span>
-                      </div>
-                    </div>
-                  ) : (
-                    <button
-                      onClick={handleRunSpeedTest}
-                      className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-mono text-[9px] active:scale-95 transition-all shadow-[0_4px_12px_rgba(59,130,246,0.3)]"
-                    >
-                      ▶ EXECUTE LIGHTHOUSE PIPELINE
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
-
-            {/* Live Streaming Booking ticker */}
-            <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
-              <div className="flex items-center gap-2.5 overflow-hidden">
-                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
-                <span className="font-mono text-[10px] text-gray-400 whitespace-nowrap animate-pulse">
-                  {latestBooking}
-                </span>
-              </div>
-              <span className="font-mono text-[9px] text-blue-400 flex-shrink-0 bg-blue-500/10 px-1.5 py-0.5 rounded ml-2">
-                JUST NOW
-              </span>
-            </div>
-
           </motion.div>
-
-          {/* Floating UI Elements surrounding the dashboard */}
-          <div className="absolute -top-12 -left-12 p-3 rounded-xl glass-effect border border-white/10 hidden sm:flex items-center gap-3 shadow-xl animate-float pointer-events-none">
-            <div className="w-8 h-8 rounded-lg bg-blue-500/15 flex items-center justify-center text-blue-400">
-              <Zap className="w-4 h-4" />
-            </div>
-            <div>
-              <span className="block text-[10px] text-gray-500 uppercase tracking-wider font-mono">Performance Score</span>
-              <span className="block text-xs font-bold text-white font-display">0.24s Page Speed</span>
-            </div>
-          </div>
-
-          <div className="absolute -bottom-6 -right-12 p-3 rounded-xl glass-effect border border-white/10 hidden sm:flex items-center gap-3 shadow-xl animate-float-slow pointer-events-none">
-            <div className="w-8 h-8 rounded-lg bg-purple-500/15 flex items-center justify-center text-purple-400">
-              <ShieldCheck className="w-4 h-4" />
-            </div>
-            <div>
-              <span className="block text-[10px] text-gray-500 uppercase tracking-wider font-mono">AWS Shield</span>
-              <span className="block text-xs font-bold text-white font-display">99.99% Cloud SLA</span>
-            </div>
-          </div>
 
         </motion.div>
       </div>

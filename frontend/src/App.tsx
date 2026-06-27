@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import LeftFloatingContact from "./components/LeftFloatingContact";
 import HeroSection from "./components/HeroSection";
 import ClientLogos from "./components/ClientLogos";
+import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import PortfolioSection from "./components/PortfolioSection";
 import TeamSection from "./components/TeamSection";
@@ -102,6 +103,9 @@ export default function App() {
 
         {/* Client Logos Strip */}
         <ClientLogos />
+
+        {/* About Section */}
+        <AboutSection />
 
         {/* Services Glass cards listings */}
         <ServicesSection onStartProjectClick={handleJumpToContactDirectly} />

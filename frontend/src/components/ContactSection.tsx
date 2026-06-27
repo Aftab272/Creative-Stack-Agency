@@ -148,25 +148,32 @@ export default function ContactSection({ selectedPlanId, selectedBudgetTag, onCl
   };
 
   return (
-    <section id="contact" className="relative py-28 bg-transparent overflow-hidden border-t border-white/5">
+    <section id="contact" className="relative py-20 bg-[#0b0b0b] overflow-hidden border-t border-white/5">
       {/* Background spotlights */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-yellow-600/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 right-[5%] w-80 h-80 bg-yellow-700/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
-        {/* Header section */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4 font-mono text-[10px] uppercase text-blue-300 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            ONBOARDING STATION
+        {/* Header section - CTA Banner Style */}
+        <div className="flex flex-col md:flex-row items-center justify-between mb-16 pb-16 border-b border-white/10">
+          <div className="flex items-center gap-6">
+            <div className="w-16 h-16 rounded-full border border-yellow-500/30 flex items-center justify-center text-yellow-500">
+              <Send className="w-8 h-8" />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-white tracking-tight mb-2">
+                Have A Project In Mind?
+              </h2>
+              <p className="text-gray-400 text-sm font-light leading-relaxed">
+                Let's work together and bring your ideas to life.
+              </p>
+            </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-4">
-            Let’s Build Something Great<span className="text-blue-500">.</span>
-          </h2>
-          <p className="text-gray-400 text-sm font-light leading-relaxed">
-            Fill out our interactive onboarding ticket below, or schedule a direct video consultation with our lead technical coordinator, Akram, to map your system architecture.
-          </p>
+          <button className="mt-8 md:mt-0 px-8 py-4 bg-yellow-500 text-black font-display font-bold text-sm tracking-wide flex items-center gap-2 hover:bg-yellow-400 transition-colors">
+            GET A FREE QUOTE
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
 
         {/* Form and Map columns split */}

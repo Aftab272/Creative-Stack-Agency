@@ -54,24 +54,23 @@ export default function ServicesSection({ onStartProjectClick }: ServicesSection
   };
 
   return (
-    <section id="services" className="relative py-28 bg-transparent overflow-hidden border-t border-white/5">
+    <section id="services" className="relative py-24 bg-gray-50 overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/3 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-yellow-600/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-yellow-500/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-4 font-mono text-[10px] uppercase text-yellow-300 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-yellow-400" />
-            Core Capabilities
-          </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-tight mb-4">
-            Bespoke Services. Proven Growth<span className="text-yellow-500">.</span>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-display font-semibold text-sm uppercase tracking-widest text-yellow-500 mb-4 block">
+            OUR SERVICES
+          </span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 tracking-tight mb-4">
+            Services We Offer
           </h2>
-          <p className="text-gray-400 text-md leading-relaxed font-light">
-            We bypass generic templates to engineer custom-coded, search-optimized web applications, engaging video assets, and elite marketing frameworks tailored to maximize client conversions.
+          <p className="text-gray-600 text-md leading-relaxed font-normal max-w-xl mx-auto">
+            We provide a wide range of digital services to help your business grow and succeed online.
           </p>
         </div>
 
@@ -91,40 +90,30 @@ export default function ServicesSection({ onStartProjectClick }: ServicesSection
               className="group interactive-hover relative p-6 rounded-2xl bg-agency-card border border-white/5 shadow-lg transition-colors duration-500 flex flex-col justify-between"
             >
               {/* Background gradient border subtle on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 to-yellow-600/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
+              <div className="absolute inset-0 bg-yellow-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
               
-              <div>
+              <div className="relative z-10 flex flex-col items-center text-center">
                 {/* Custom Icon Circle */}
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 group-hover:bg-yellow-600/15 group-hover:border-yellow-400/20 flex items-center justify-center text-gray-400 group-hover:text-yellow-400 transition-all duration-300 mb-6">
-                  <IconComponent name={service.iconName} className="w-6 h-6 transition-transform group-hover:scale-110" />
+                <div className="mb-6 text-yellow-500 transition-transform duration-300 group-hover:scale-110">
+                  <IconComponent name={service.iconName} className="w-10 h-10" />
                 </div>
 
-                <h3 className="font-display font-semibold text-lg text-white mb-3 group-hover:text-yellow-300 transition-colors">
+                <h3 className="font-display font-bold text-lg text-gray-900 mb-3 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-400 text-xs leading-relaxed mb-6 font-light">
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 font-normal">
                   {service.description}
                 </p>
-
-                {/* Sub-deliverables list */}
-                <ul className="space-y-2 mb-6 border-t border-white/5 pt-4">
-                  {service.bulletPoints.map((point, index) => (
-                    <li key={index} className="flex items-center gap-2 text-[11px] text-gray-300">
-                      <div className="w-1 h-1 rounded-full bg-yellow-400/80" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
               </div>
 
               {/* Action Button */}
               <button
                 onClick={() => setActiveModalService(service)}
-                className="inline-flex items-center gap-1.5 text-xs text-yellow-400 hover:text-yellow-300 font-semibold group/btn cursor-pointer py-1 mt-2 tracking-wide self-start"
+                className="relative z-10 inline-flex items-center justify-center gap-1.5 text-xs text-yellow-500 hover:text-yellow-600 font-bold group/btn cursor-pointer py-1 mt-2 tracking-wide self-center"
               >
-                Learn More
-                <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1.5 transition-transform" />
+                LEARN MORE
+                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </button>
 
             </motion.div>
