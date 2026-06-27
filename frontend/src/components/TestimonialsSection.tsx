@@ -618,7 +618,7 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Simulated Phone viewport containing dynamic status media */}
-            <div className="relative rounded-2xl border border-white/15 bg-slate-950 overflow-hidden shadow-2xl h-[420px] flex flex-col justify-between group">
+            <div className="relative rounded-2xl border border-white/15 bg-slate-950 overflow-hidden shadow-2xl h-[550px] md:h-[600px] flex flex-col justify-between group">
               
               {/* Tap overlays left & right */}
               <div 
