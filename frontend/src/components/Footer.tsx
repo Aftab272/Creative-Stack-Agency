@@ -25,7 +25,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#0A0A0A]/40 border-t border-white/5 pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-[#050505] border-t border-white/5 pt-20 pb-10 overflow-hidden">
       
       {/* Background soft color spotlight */}
       <div className="absolute bottom-0 right-[20%] w-96 h-96 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none" />
