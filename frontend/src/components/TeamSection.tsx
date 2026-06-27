@@ -426,7 +426,8 @@ export default function TeamSection() {
                     <span className="text-[10px] uppercase font-mono text-gray-400 tracking-wider block mb-2 font-medium">SPECIALTIES:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {member.skills.map((skill, idx) => (
-                        <span key={idx} className="px-2 py-0.5 rounded bg-white/5 text-[10px] font-mono text-gray-300">
+                        <span key={idx} className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] font-mono text-gray-300 font-medium">
+                          <CheckCircle className="w-3 h-3 text-yellow-500" />
                           {skill}
                         </span>
                       ))}
@@ -439,32 +440,32 @@ export default function TeamSection() {
                   <span className="text-[10px] font-mono text-gray-400">{member.experience}</span>
                   <div className="flex items-center gap-2 text-gray-400">
                     {member.socialLinks.linkedin && (
-                      <a href={member.socialLinks.linkedin} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                      <a href={member.socialLinks.linkedin} target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-yellow-600 border border-white/5 hover:border-yellow-500 text-gray-400 hover:text-black transition-all shadow-md" aria-label="LinkedIn">
                         <Linkedin className="w-3.5 h-3.5" />
                       </a>
                     )}
                     {member.socialLinks.github && (
-                      <a href={member.socialLinks.github} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="GitHub">
+                      <a href={member.socialLinks.github} target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-slate-700 border border-white/5 hover:border-white/30 text-gray-400 hover:text-white transition-all shadow-md" aria-label="GitHub">
                         <Github className="w-3.5 h-3.5" />
                       </a>
                     )}
                     {member.socialLinks.twitter && (
-                      <a href={member.socialLinks.twitter} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+                      <a href={member.socialLinks.twitter} target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-[#1DA1F2] border border-white/5 hover:border-[#1DA1F2] text-gray-400 hover:text-white transition-all shadow-md" aria-label="Twitter">
                         <Twitter className="w-3.5 h-3.5" />
                       </a>
                     )}
                     {member.socialLinks.instagram && (
-                      <a href={member.socialLinks.instagram} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                      <a href={member.socialLinks.instagram} target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 border border-white/5 hover:border-pink-500 text-gray-400 hover:text-white transition-all shadow-md" aria-label="Instagram">
                         <Instagram className="w-3.5 h-3.5" />
                       </a>
                     )}
                     {member.socialLinks.facebook && (
-                      <a href={member.socialLinks.facebook} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                      <a href={member.socialLinks.facebook} target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-blue-800 border border-white/5 hover:border-blue-700 text-gray-400 hover:text-white transition-all shadow-md" aria-label="Facebook">
                         <Facebook className="w-3.5 h-3.5" />
                       </a>
                     )}
                     {member.socialLinks.tiktok && (
-                      <a href={member.socialLinks.tiktok} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="TikTok">
+                      <a href={member.socialLinks.tiktok} target="_blank" rel="noreferrer" className="p-2 rounded-lg bg-white/5 hover:bg-black border border-white/5 hover:border-gray-800 text-gray-400 hover:text-white transition-all shadow-md" aria-label="TikTok">
                         <Music className="w-3.5 h-3.5" />
                       </a>
                     )}
@@ -473,9 +474,9 @@ export default function TeamSection() {
 
                 <button
                   onClick={() => setSelectedMember(member)}
-                  className="mt-4 w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-yellow-500/10 border border-white/5 hover:border-yellow-500/20 text-[11px] font-mono text-yellow-500 hover:text-white transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+                  className="mt-4 w-full py-3 px-4 rounded-xl bg-yellow-500/10 hover:bg-yellow-500/20 border border-white/10 hover:border-yellow-500/30 text-xs font-mono text-yellow-500 hover:text-yellow-400 transition-all text-center flex items-center justify-center gap-1.5 cursor-pointer active:scale-95 shadow-md"
                 >
-                  <Award className="w-3.5 h-3.5 text-yellow-500" />
+                  <Award className="w-4 h-4 text-yellow-500" />
                   View Credentials & Bio
                 </button>
 
