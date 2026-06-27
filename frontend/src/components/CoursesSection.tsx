@@ -605,7 +605,7 @@ export default function CoursesSection() {
             {COURSES_DATA.map((course) => (
               <div 
                 key={course.id}
-                className="relative rounded-2xl bg-white border border-gray-100 p-6 sm:p-8 flex flex-col justify-between hover:border-purple-500/20 transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
+                className="relative rounded-2xl bg-[#0B0B0B] border border-white/10 p-6 sm:p-8 flex flex-col justify-between hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1.5 shadow-xl group h-full"
               >
                 <div className="absolute top-4 right-4 px-2.5 py-1 rounded bg-[#0a0a0ade] border border-purple-500/15 text-[8px] font-mono tracking-widest text-purple-400 uppercase font-bold">
                   {course.badge}
@@ -627,38 +627,38 @@ export default function CoursesSection() {
                     </div>
                   </div>
 
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 tracking-tight leading-tight group-hover:text-purple-600 transition-colors">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-white tracking-tight leading-tight group-hover:text-blue-400 transition-colors">
                     {course.title}
                   </h3>
 
                   {/* Mentor Block Information details */}
-                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-gray-600 mt-3 font-mono border-b border-gray-100 pb-4 mb-4">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-gray-400 mt-3 font-mono border-b border-white/10 pb-4 mb-4">
                     <span className="flex items-center gap-1">
                       <GraduationCap className="w-3.5 h-3.5 text-purple-500" />
-                      Mentor: <strong className="text-gray-900 font-medium">{course.mentor}</strong>
+                      Mentor: <strong className="text-white font-medium">{course.mentor}</strong>
                     </span>
-                    <span className="hidden sm:inline text-gray-300">|</span>
+                    <span className="hidden sm:inline text-gray-500">|</span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-blue-500" />
-                      Timings: <strong className="text-gray-900 font-medium">{course.timings}</strong>
+                      Timings: <strong className="text-white font-medium">{course.timings}</strong>
                     </span>
                   </div>
 
-                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-normal mb-6">
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed font-normal mb-6">
                     {course.description}
                   </p>
 
                   {/* REAL-TIME STUDENT ATTENDANCE TELEMETRY */}
-                  <div className="my-6 p-4 rounded-xl bg-gray-50 border border-gray-100 flex flex-col gap-2.5 relative overflow-hidden shadow-sm">
+                  <div className="my-6 p-4 rounded-xl bg-white/5 border border-white/10 flex flex-col gap-2.5 relative overflow-hidden shadow-sm">
                     <div className="absolute top-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
                     
                     <div className="flex items-center justify-between text-xs font-mono">
-                      <div className="flex items-center gap-1.5 text-emerald-600 font-bold">
+                      <div className="flex items-center gap-1.5 text-emerald-400 font-bold">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                         <span>LIVE SESSION</span>
                       </div>
-                      <div className="text-gray-600">
-                        <span className="text-emerald-600 font-extrabold text-sm">{liveStudentCounts[course.id] || 32} Students</span> taking class now
+                      <div className="text-gray-400">
+                        <span className="text-emerald-400 font-extrabold text-sm">{liveStudentCounts[course.id] || 32} Students</span> taking class now
                       </div>
                     </div>
 
@@ -677,10 +677,10 @@ export default function CoursesSection() {
                   </div>
 
                   <div className="space-y-2 mb-6">
-                    <span className="text-[10px] uppercase font-mono text-gray-500 tracking-wider block font-semibold">Technical mastery skills delivered:</span>
+                    <span className="text-[10px] uppercase font-mono text-gray-400 tracking-wider block font-semibold">Technical mastery skills delivered:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {course.skills.map((skill, sIdx) => (
-                        <span key={sIdx} className="px-2.5 py-1 rounded-lg bg-gray-100 border border-gray-200 text-[10px] font-mono text-gray-700 font-medium">
+                        <span key={sIdx} className="px-2.5 py-1 rounded-lg bg-white/10 border border-white/10 text-[10px] font-mono text-gray-300 font-medium">
                           {skill}
                         </span>
                       ))}
@@ -688,10 +688,10 @@ export default function CoursesSection() {
                   </div>
                 </div>
 
-                <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div className="text-left w-full sm:w-auto">
-                    <span className="block text-[9px] font-mono text-gray-500 uppercase">Interactive Course Fee</span>
-                    <span className="text-lg font-mono font-bold text-emerald-600">{course.price}</span>
+                    <span className="block text-[9px] font-mono text-gray-400 uppercase">Interactive Course Fee</span>
+                    <span className="text-lg font-mono font-bold text-emerald-400">{course.price}</span>
                   </div>
 
                   <button

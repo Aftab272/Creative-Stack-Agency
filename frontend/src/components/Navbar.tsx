@@ -64,6 +64,17 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
     }
   };
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav
       id="main-nav"
@@ -155,14 +166,14 @@ export default function Navbar({ onStartProjectClick }: NavbarProps) {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed inset-y-0 right-0 w-full max-w-xs z-40 bg-black/95 backdrop-blur-xl border-l border-white/10 p-8 pt-24 shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed inset-0 w-full h-[100dvh] z-[9999] bg-[#0B0B0B] p-8 pt-24 transition-transform duration-300 ease-out lg:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Close Button at Top */}
         <button
           onClick={() => setIsMenuOpen(false)}
-          className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all"
+          className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all z-[10000]"
           aria-label="Close menu"
         >
           <X className="w-6 h-6" />

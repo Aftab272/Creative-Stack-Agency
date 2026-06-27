@@ -359,13 +359,13 @@ export default function TeamSection() {
             CREATIVE COLLABORATORS & EXPERTS
           </h3>
           
-          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto pb-8 md:pb-0 snap-x snap-mandatory hide-scroll-bar px-4 md:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto px-4 md:px-0">
             {experts.map((member) => (
               <motion.div
                 variants={cardVariants}
                 whileHover={{ y: -5, borderColor: "rgba(59,130,246,0.3)", boxShadow: "0 20px 40px -10px rgba(0,0,0,0.1)" }}
                 key={member.id}
-                className="group relative rounded-2xl bg-white border border-gray-100 hover:border-blue-500/20 p-6 flex flex-col justify-between transition-all duration-300 shadow-lg min-w-[85vw] sm:min-w-[400px] md:min-w-0 snap-center"
+                className="group relative rounded-2xl bg-[#0B0B0B] border border-white/10 hover:border-blue-500/50 p-6 flex flex-col justify-between transition-all duration-300 shadow-lg w-full h-full"
               >
                 {/* Visual Glass highlights */}
                 <div className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl pointer-events-none" />
@@ -373,7 +373,7 @@ export default function TeamSection() {
                 <div className="relative z-10">
                   {/* Photo & Core Bio Header */}
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="relative w-24 h-24 rounded-xl overflow-hidden border border-gray-200 bg-gray-100 flex-shrink-0">
+                    <div className="relative w-24 h-24 rounded-xl overflow-hidden border border-white/10 bg-black flex-shrink-0">
                       <img
                         src={member.avatarUrl}
                         alt={member.name}
@@ -382,14 +382,14 @@ export default function TeamSection() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
+                      <h4 className="font-display font-bold text-lg text-white group-hover:text-blue-400 transition-colors">
                         {member.name}
                       </h4>
-                      <span className="text-xs text-gray-500 font-mono italic block">{member.role}</span>
+                      <span className="text-xs text-gray-400 font-mono italic block">{member.role}</span>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm leading-relaxed font-normal mb-6">
+                  <p className="text-gray-300 text-sm leading-relaxed font-normal mb-6">
                     {member.bio}
                   </p>
 
@@ -423,10 +423,10 @@ export default function TeamSection() {
 
                   {/* Skills lists */}
                   <div className="mb-6 relative z-10">
-                    <span className="text-[10px] uppercase font-mono text-gray-500 tracking-wider block mb-2 font-medium">SPECIALTIES:</span>
+                    <span className="text-[10px] uppercase font-mono text-gray-400 tracking-wider block mb-2 font-medium">SPECIALTIES:</span>
                     <div className="flex flex-wrap gap-1.5">
                       {member.skills.map((skill, idx) => (
-                        <span key={idx} className="px-2 py-0.5 rounded bg-gray-100 text-[10px] font-mono text-gray-600">
+                        <span key={idx} className="px-2 py-0.5 rounded bg-white/5 text-[10px] font-mono text-gray-300">
                           {skill}
                         </span>
                       ))}
@@ -435,8 +435,8 @@ export default function TeamSection() {
                 </div>
 
                 {/* Footer and personal Social icons */}
-                <div className="relative z-10 flex items-center justify-between pt-4 border-t border-gray-100">
-                  <span className="text-[10px] font-mono text-gray-500">{member.experience}</span>
+                <div className="relative z-10 flex items-center justify-between pt-4 border-t border-white/10">
+                  <span className="text-[10px] font-mono text-gray-400">{member.experience}</span>
                   <div className="flex items-center gap-2 text-gray-400">
                     {member.socialLinks.linkedin && (
                       <a href={member.socialLinks.linkedin} target="_blank" rel="noreferrer" className="p-2 rounded bg-white/5 text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
